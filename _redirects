@@ -1,0 +1,14 @@
+/legal /legal/index.html 200
+/support /support.html 301
+/terms /terms.html 301
+/privacy /privacy.html 301
+/data-deletion /data-deletion.html 301
+/policy/platform/terms /terms.html 301
+/policy/stays_v1/terms /stays-terms.html 301
+/policy/stays_v1/refund_policy /stays-refund-policy.html 301
+/policy/retail_v1/terms /retail-terms.html 301
+/policy/retail_v1/refund_policy /retail-refund-policy.html 301
+/policy/services_v1/terms /services-terms.html 301
+/policy/services_v1/refund_policy /services-refund-policy.html 301
+/policy/generic_v1/terms /generic-terms.html 301
+/policy/generic_v1/refund_policy /generic-refund-policy.html 301
