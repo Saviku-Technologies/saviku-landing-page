@@ -1,0 +1,25 @@
+/* Saviku brand colors — derived from logo (assets/saviku_logo.jpg) */
+
+:root {
+  /* Primary */
+  --saviku-navy: #0D3592;        /* primary — headers, buttons, brand surfaces */
+  --saviku-navy-deep: #091B4F;   /* dark text, footers, dark-mode base */
+
+  /* Secondary */
+  --saviku-teal: #39A8AF;        /* fills, icons, highlights */
+  --saviku-teal-dark: #2C8189;   /* links/interactive teal on light bg (a11y) */
+
+  /* Accent — use sparingly (10%), primary CTAs only */
+  --saviku-gold: #F4BE4C;
+  --saviku-gold-text: #412402;   /* text on gold; never white */
+
+  /* Neutrals */
+  --saviku-white: #F4F8FA;       /* page backgrounds, cards */
+  --saviku-gray: #E3EBF0;        /* dividers, disabled states, subtle fills */
+  --saviku-on-navy-muted: #B5C8F0; /* secondary text on navy */
+
+  /* Semantic */
+  --saviku-success: #1E9E4A;
+  --saviku-warning: #E8A317;
+  --saviku-error: #D8402F;
+}
