@@ -633,6 +633,53 @@ body.is-locked { overflow: hidden; }
   text-align: center;
 }
 
+/* WABA native date-picker state — rendered as an interactive flow card */
+.native-date-picker {
+  align-self: stretch;
+  overflow: hidden;
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(11, 20, 26, .14);
+}
+.date-picker-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 10px 7px;
+  border-bottom: 1px solid rgba(134, 150, 160, .2);
+}
+.date-picker-head > svg { width: 20px; height: 20px; flex: none; color: var(--product-green); }
+.date-picker-head b,
+.date-picker-head small { display: block; }
+.date-picker-head b { color: var(--ink); font-size: 12px; line-height: 1.25; }
+.date-picker-head small { margin-top: 1px; color: var(--ink-faint); font-size: 9px; }
+.date-fields {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 16px minmax(0, 1fr);
+  gap: 6px;
+  align-items: center;
+  margin: 8px;
+  padding: 7px 8px;
+  border: 1px solid rgba(11, 107, 83, .2);
+  border-radius: 8px;
+  background: var(--product-chip);
+}
+.date-fields span { min-width: 0; }
+.date-fields small,
+.date-fields b { display: block; }
+.date-fields small { color: var(--ink-soft); font-size: 8px; }
+.date-fields b { margin-top: 1px; color: var(--product-green-dark); font-size: 10px; white-space: nowrap; }
+.date-fields > svg { width: 15px; height: 15px; color: var(--product-green); }
+.date-confirm {
+  display: block;
+  padding: 7px 10px 8px;
+  border-top: 1px solid rgba(134, 150, 160, .2);
+  color: var(--product-green);
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+}
+
 /* the "synced" summary card Savi sends back */
 .chat-card {
   align-self: flex-start;
@@ -923,9 +970,15 @@ body.is-locked { overflow: hidden; }
   letter-spacing: -.01em;
   box-shadow: 0 1px 3px rgba(9, 27, 79, .14);
 }
-.avatar--green { background: var(--product-green); }
-.avatar--navy { background: var(--saviku-navy); }
-.avatar--gold { background: var(--saviku-gold); color: var(--saviku-gold-text); }
+.avatar--photo {
+  background-color: var(--saviku-gray);
+  background-image: url("/assets/guest-avatars.jpg");
+  background-repeat: no-repeat;
+  background-size: 300% 100%;
+}
+.avatar--amina { background-position: left center; }
+.avatar--james { background-position: center center; }
+.avatar--kevin { background-position: right center; }
 .profile-line { display: flex; min-width: 0; align-items: center; gap: 9px; }
 .profile-line > span:last-child { min-width: 0; }
 .profile-line strong,
