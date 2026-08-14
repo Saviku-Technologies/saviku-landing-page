@@ -540,6 +540,7 @@ body.is-locked { overflow: hidden; }
 /* ---------- the phone / chat mock (the product, rendered in CSS) ----------- */
 .device {
   position: relative;
+  isolation: isolate;
   width: min(320px, 100%);
   margin-inline: auto;
   padding: 9px;
@@ -547,6 +548,34 @@ body.is-locked { overflow: hidden; }
   border-radius: 38px;
   background: linear-gradient(180deg, rgba(255, 255, 255, .16), rgba(255, 255, 255, .04));
   box-shadow: var(--shadow-lg), 0 0 0 1px rgba(5, 15, 46, .5);
+}
+.device--carousel { padding-bottom: 6px; }
+.device-deck {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.device-deck span {
+  position: absolute;
+  top: 34px;
+  right: -17px;
+  bottom: 38px;
+  left: 19px;
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 34px;
+  background: rgba(20, 54, 112, .72);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, .16);
+  transform: rotate(3deg);
+}
+.device-deck span + span {
+  top: 48px;
+  right: -29px;
+  bottom: 49px;
+  left: 33px;
+  z-index: -1;
+  opacity: .58;
+  transform: rotate(5deg);
 }
 .device::before {
   content: "";
@@ -561,11 +590,30 @@ body.is-locked { overflow: hidden; }
   z-index: 2;
 }
 .device-screen {
+  position: relative;
+  z-index: 2;
   overflow: hidden;
   border-radius: 30px;
   background: var(--wa-chat-bg);
 }
-
+.hero-chat-screen .chat { box-sizing: border-box; height: calc(100% - 57px); gap: 6px; padding-block: 11px; }
+.hero-chat-screen .qr span { padding-block: 6px; }
+.hero-chat-screen .chat-head { box-sizing: border-box; height: 57px; padding: 18px 14px 7px; }
+.hero-chat-screen .mini-chat-head { min-height: 57px; padding-top: 18px; box-sizing: border-box; }
+.hero-chat-screen .mini-chat-head > span:nth-child(2) { min-width: 0; flex: 1; }
+.hero-thread { box-sizing: border-box; min-height: 0; height: calc(100% - 57px); padding: 13px 11px 34px; }
+.hero-screen-chip {
+  margin-left: auto;
+  padding: 3px 7px;
+  border: 1px solid rgba(255, 255, 255, .24);
+  border-radius: var(--r-pill);
+  color: rgba(255, 255, 255, .82);
+  font-family: var(--font-mono);
+  font-size: 7.5px;
+  font-weight: 750;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
 /* PRODUCT context inside the mock — product-green header, per §3 */
 .chat-head {
   display: flex;
@@ -577,8 +625,8 @@ body.is-locked { overflow: hidden; }
 }
 .chat-head img { width: 26px; height: 26px; }
 .chat-who { min-width: 0; }
-.chat-who strong { display: block; font-size: 13.5px; letter-spacing: -.01em; }
-.chat-who span { font-size: 10.5px; opacity: .82; }
+.chat-who strong { display: block; font-size: 13.5px; line-height: 1.15; letter-spacing: -.01em; }
+.chat-who span { display: block; font-size: 10.5px; line-height: 1.15; opacity: .82; }
 
 .chat {
   display: flex;
@@ -714,7 +762,9 @@ body.is-locked { overflow: hidden; }
 .device-badge strong { display: block; font-size: 12px; color: var(--saviku-navy-deep); }
 
 @media (max-width: 400px) {
-  .device-badge { right: -4px; bottom: 22px; max-width: 200px; }
+  .device-badge { right: -4px; bottom: 42px; max-width: 200px; }
+  .device-deck span { right: -10px; }
+  .device-deck span + span { right: -17px; }
 }
 
 /* ---------- channel ticker ------------------------------------------------- */
@@ -1185,6 +1235,10 @@ body.is-locked { overflow: hidden; }
 
 @media (min-width: 720px) {
   .guest-section-head { grid-template-columns: minmax(0, 1fr) auto; }
+}
+/* the guest deck hands over to a 3-up grid at the same width it switches off
+   (site.js: data-deck-until="900") — keep the two in step */
+@media (min-width: 900px) {
   .guest-examples { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
@@ -1316,51 +1370,218 @@ body.is-locked { overflow: hidden; }
 .cta .button.link { color: var(--saviku-gold-text); }
 .cta .small { color: rgba(65, 36, 2, .84); }
 
-/* ---------- native WhatsApp use-case carousel ---------------------------- */
-.chat-showcase { overflow: hidden; }
-.carousel-head {
+/* ---------- example decks ------------------------------------------------
+   Shared by the hero phone, the "inside the conversation" flows and the guest
+   cards. Before JS (and without it) every card sits in normal flow and reads
+   as a plain stack; .is-ready switches to a single grid cell so all cards
+   overlap and the deck is exactly as tall as its tallest card — no measuring,
+   no absolute positioning, no inline styles. */
+.deck {
   display: grid;
-  gap: 22px;
-  align-items: end;
-  margin-bottom: 28px;
+  gap: 14px;
+  min-width: 0;
 }
-.carousel-head .lede { max-width: 68ch; }
-.carousel-controls { display: flex; gap: 9px; }
-.carousel-button {
-  display: inline-grid;
-  width: 44px;
-  height: 44px;
-  place-items: center;
-  border: 1px solid rgba(255, 255, 255, .28);
-  border-radius: 50%;
-  background: rgba(255, 255, 255, .07);
-  color: #fff;
-  cursor: pointer;
-  transition: border-color var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease), opacity var(--dur-fast) var(--ease);
+.deck.is-ready {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  touch-action: pan-y;
 }
-.carousel-button:hover { border-color: var(--saviku-gold); background: rgba(255, 255, 255, .12); }
-.carousel-button:disabled { opacity: .35; cursor: default; }
-.carousel-button svg { width: 19px; height: 19px; }
-.carousel-shell { min-width: 0; }
-.chat-carousel {
+.deck.is-ready > [data-deck-card] {
+  grid-area: 1 / 1;
+  transition: transform var(--dur-slow) var(--ease), opacity var(--dur) var(--ease);
+}
+.deck.is-ready > [data-deck-card][data-pos="0"] {
+  z-index: 4;
+  opacity: 1;
+  transform: none;
+}
+.deck.is-ready > [data-deck-card]:not([data-pos="0"]) { pointer-events: none; }
+.deck:focus-visible { outline-offset: 6px; }
+
+/* deck-of-cards: the next two peek out behind the front card. Offsets stay
+   vertical (plus a slight tilt) so a full-width card on a phone never pushes
+   past the gutter. */
+.deck--stack.is-ready { padding-top: 26px; }
+.deck--stack.is-ready > [data-deck-card][data-pos="1"] {
+  z-index: 3;
+  opacity: .5;
+  transform: translateY(-12px) scale(.973) rotate(-.8deg);
+}
+.deck--stack.is-ready > [data-deck-card][data-pos="2"] {
+  z-index: 2;
+  opacity: .24;
+  transform: translateY(-22px) scale(.947) rotate(1.4deg);
+}
+.deck--stack.is-ready > [data-deck-card][data-pos="back"] {
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(-22px) scale(.947) rotate(1.4deg);
+}
+
+/* inside the phone the screen clips, so the cards slide in place instead */
+.deck--frame { height: 520px; }
+.deck--frame > [data-deck-card] {
+  height: 100%;
+  overflow: hidden;
+  background: var(--wa-chat-bg);
+}
+.deck--frame.is-ready > [data-deck-card]:not([data-pos="0"]) {
+  opacity: 0;
+  transform: translateX(9%);
+}
+
+/* ---------- deck controls (built by site.js) ---------------------------- */
+.deck-controls {
   display: flex;
-  gap: 16px;
-  margin-inline: calc(50% - 50vw);
-  padding: 4px max(18px, calc((100vw - 1180px) / 2)) 18px;
-  overflow-x: auto;
-  overscroll-behavior-inline: contain;
-  scroll-behavior: smooth;
-  scroll-padding-inline: max(18px, calc((100vw - 1180px) / 2));
-  scroll-snap-type: x mandatory;
-  scrollbar-color: rgba(255, 255, 255, .32) rgba(255, 255, 255, .08);
-  scrollbar-width: thin;
-  -webkit-overflow-scrolling: touch;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 18px;
 }
+.deck-controls[hidden] { display: none; }
+.deck-controls--compact {
+  position: relative;
+  z-index: 3;
+  gap: 8px;
+  margin-top: 0;
+  padding: 9px 0 2px;
+}
+
+.deck-nav, .deck-play {
+  display: inline-grid;
+  flex: none;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--saviku-gray);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--saviku-navy);
+  cursor: pointer;
+  transition: border-color var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease);
+}
+.deck-nav { width: 42px; height: 42px; }
+.deck-play { width: 32px; height: 32px; }
+.deck-nav:hover, .deck-play:hover { border-color: var(--saviku-navy); background: var(--brand-chip); }
+
+/* CSS-drawn glyphs — nothing to inject, nothing to load */
+.deck-nav::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+}
+.deck-nav--prev::before { transform: translateX(1px) rotate(135deg); }
+.deck-nav--next::before { transform: translateX(-1px) rotate(-45deg); }
+.deck-play::before {
+  content: "";
+  width: 8px;
+  height: 10px;
+  border-left: 2.5px solid currentColor;
+  border-right: 2.5px solid currentColor;
+}
+.deck-play[aria-pressed="true"]::before {
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-right: 0;
+  border-left: 8px solid currentColor;
+  transform: translateX(1px);
+}
+
+.deck-dots { display: flex; align-items: center; gap: 0; }
+.deck-dots button {
+  position: relative;
+  display: grid;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  place-items: center;
+}
+.deck-dots button::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(13, 53, 146, .26);
+  transition: width var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease);
+}
+.deck-dots button:hover::before { background: rgba(13, 53, 146, .5); }
+.deck-dots button[aria-current="true"]::before {
+  width: 20px;
+  height: 7px;
+  border-radius: var(--r-pill);
+  background: var(--saviku-navy);
+}
+
+/* on dark surfaces */
+.hero .deck-nav, .hero .deck-play,
+.on-dark .deck-nav, .on-dark .deck-play {
+  border-color: rgba(255, 255, 255, .28);
+  background: rgba(255, 255, 255, .08);
+  color: #fff;
+}
+.hero .deck-nav:hover, .hero .deck-play:hover,
+.on-dark .deck-nav:hover, .on-dark .deck-play:hover {
+  border-color: var(--saviku-gold);
+  background: rgba(255, 255, 255, .16);
+}
+.hero .deck-dots button::before, .on-dark .deck-dots button::before { background: rgba(255, 255, 255, .32); }
+.hero .deck-dots button:hover::before, .on-dark .deck-dots button:hover::before { background: rgba(255, 255, 255, .6); }
+.hero .deck-dots button[aria-current="true"]::before,
+.on-dark .deck-dots button[aria-current="true"]::before { background: var(--saviku-gold); }
+
+.deck-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---------- "inside the conversation" ----------------------------------- */
+.flow-list {
+  display: grid;
+  gap: 9px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.flow-list li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.flow-list li::before {
+  content: "";
+  width: 15px;
+  height: 8px;
+  margin-top: 6px;
+  border-left: 2px solid var(--saviku-gold);
+  border-bottom: 2px solid var(--saviku-gold);
+  transform: rotate(-45deg) translate(1px, -1px);
+}
+.flow-list b {
+  color: #fff;
+  font-weight: 700;
+}
+.flow-list span { color: var(--saviku-on-navy-muted); }
+
 .chat-example {
-  flex: 0 0 min(338px, calc(100vw - 46px));
   min-width: 0;
   padding: 14px;
-  scroll-snap-align: start;
   border: 1px solid rgba(255, 255, 255, .15);
   border-radius: 24px;
   background: #fff;
@@ -1389,7 +1610,7 @@ body.is-locked { overflow: hidden; }
 .audience-chip--both { background: #eee8ff; color: #593a88; }
 .audience-chip--guest { background: var(--product-chip); color: var(--product-green-dark); }
 .chat-example h3 { margin: 0 0 4px; color: var(--saviku-navy-deep); font-size: 20px; }
-.chat-example > p { min-height: 42px; margin: 0 0 13px; color: var(--ink-soft); font-size: 12.5px; line-height: 1.45; }
+.chat-example > p { margin: 0 0 13px; color: var(--ink-soft); font-size: 12.5px; line-height: 1.45; }
 .mini-phone {
   overflow: hidden;
   border: 1px solid rgba(17, 27, 33, .22);
@@ -1531,15 +1752,19 @@ body.is-locked { overflow: hidden; }
 .mini-warning-card b { color: #8a4d00; font-size: 10.5px; }
 .mini-warning-card small { color: #735522; }
 .carousel-hint {
-  margin: 10px 0 0;
+  margin: 12px 0 0;
   color: rgba(255, 255, 255, .58);
   font-family: var(--font-mono);
   font-size: 9.5px;
   letter-spacing: .04em;
+  text-align: center;
 }
-@media (min-width: 760px) {
-  .carousel-head { grid-template-columns: minmax(0, 1fr) auto; }
-  .carousel-controls { padding-bottom: 7px; }
+.deck-column { min-width: 0; }
+@media (min-width: 900px) {
+  /* a tall deck against a short description: pin the description, top-align */
+  .chat-showcase .split { align-items: start; }
+  .chat-showcase .deck.is-ready { padding-top: 30px; }
+  .carousel-hint { text-align: left; }
 }
 
 /* ---------- footer -------------------------------------------------------- */
@@ -1793,7 +2018,6 @@ code {
 /* ---------- accessibility & print ---------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .chat-carousel { scroll-behavior: auto; }
   *, *::before, *::after {
     animation-duration: .001ms !important;
     animation-iteration-count: 1 !important;

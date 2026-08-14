@@ -19,7 +19,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Saviku Technologies">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="/assets/site.css?v=10">
+  <link rel="stylesheet" href="/assets/site.css?v=11">
 </head>
 <body data-hero="dark">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -81,7 +81,7 @@
         </div>
         <p class="hero-note">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>
-          Every reply is a fixed option or button. Savi never improvises your bookings.
+          Structured booking, money and identity actions stay on fixed, auditable paths.
         </p>
         <ul class="chips">
           <li>Realtime channel sync</li>
@@ -91,36 +91,90 @@
         </ul>
       </div>
 
-      <!-- the product, drawn in CSS: PRODUCT context lives inside the frame -->
-      <figure class="device">
-        <div class="device-screen" role="img" aria-label="A WhatsApp conversation with Savi: the host picks a unit from buttons, chooses 12 September to 15 September in the WhatsApp Business native date picker, and Savi confirms the block was pushed to Airbnb, Booking.com and Vrbo with no overlaps found.">
-          <div class="chat-head">
-            <img src="/assets/saviku-mark-mono.svg" alt="" width="26" height="26">
-            <span class="chat-who"><strong>Savi</strong><span>Saviku Calendar Hub · online</span></span>
-          </div>
-          <div class="chat">
-            <div class="bubble bubble--in">Which unit are you blocking?<time>09:41</time></div>
-            <div class="qr"><span>Kileleshwa 1BR</span><span>Nyali Villa</span><span>Show all units</span></div>
-            <div class="bubble bubble--out">Kileleshwa 1BR<time>09:41 <span class="tick">✓✓</span></time></div>
-            <div class="bubble bubble--in">Choose the dates to block.<time>09:41</time></div>
-            <div class="native-date-picker">
-              <div class="date-picker-head">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 11h18"/></svg>
-                <span><b>Select dates</b><small>WhatsApp date picker</small></span>
+      <!-- one compact, auto-advancing product deck for every viewport -->
+      <figure class="device device--carousel" data-deck-scope>
+        <div class="device-deck" aria-hidden="true"><span></span><span></span></div>
+        <div class="device-screen deck deck--frame" data-deck data-deck-compact data-deck-noun="product example" data-deck-interval="6200" tabindex="0" role="group" aria-roledescription="carousel" aria-label="Saviku WhatsApp product examples">
+          <article class="hero-chat-screen" data-deck-card data-deck-title="Native date blocking" aria-label="Native date blocking">
+            <div class="chat-head"><img src="/assets/saviku-mark-mono.svg" alt="" width="26" height="26"><span class="chat-who"><strong>Savi</strong><span>Calendar Hub · online</span></span><span class="hero-screen-chip">Host</span></div>
+            <div class="chat">
+              <div class="bubble bubble--in">Ni unit gani unataka kublock?<time>09:41</time></div>
+              <div class="qr"><span>Kileleshwa 1BR</span><span>Nyali Villa</span></div>
+              <div class="bubble bubble--out">Nyali Villa<time>09:41 <span class="tick">✓✓</span></time></div>
+              <div class="bubble bubble--in">Choose the dates.<time>09:41</time></div>
+              <div class="native-date-picker">
+                <div class="date-picker-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 11h18"/></svg><span><b>Select dates</b><small>WhatsApp date picker</small></span></div>
+                <div class="date-fields"><span><small>Check-in</small><b>12 Sep</b></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M14 7l5 5-5 5"/></svg><span><small>Check-out</small><b>15 Sep</b></span></div>
+                <span class="date-confirm">Confirm dates</span>
               </div>
-              <div class="date-fields">
-                <span><small>Check-in</small><b>12 Sep 2026</b></span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M14 7l5 5-5 5"/></svg>
-                <span><small>Check-out</small><b>15 Sep 2026</b></span>
-              </div>
-              <span class="date-confirm">Confirm dates</span>
+              <div class="chat-card"><strong>✓ Sawa — blocked</strong><span>Airbnb, Booking.com and Vrbo updated.</span></div>
             </div>
-            <div class="chat-card"><strong>✓ Blocked · 3 nights</strong><span>Airbnb, Booking.com and Vrbo updated. No overlaps found.</span></div>
-          </div>
+            </article>
+
+            <article class="hero-chat-screen" data-deck-card data-deck-title="Realtime overlap alert" aria-label="Realtime overlap alert">
+            <div class="mini-chat-head"><img src="/assets/saviku-mark-mono.svg" alt="" width="24" height="24"><span><b>Savi</b><small>Overlap alert · realtime</small></span><span class="hero-screen-chip">Host</span></div>
+            <div class="mini-thread hero-thread">
+              <div class="mini-bubble mini-bubble--in"><b>Heads up — kuna overlap.</b><br>Nyali Villa · 14 Sep</div>
+              <div class="mini-alert-card"><span><b>Airbnb</b> · A. Kamau</span><span><b>Booking.com</b> · J. Otieno</span></div>
+              <div class="native-options"><span>View both bookings</span><span>Ask concierge</span><span>Dismiss alert</span></div>
+              <div class="mini-bubble mini-bubble--out">View both bookings <small>11:08 ✓✓</small></div>
+              <div class="mini-result">Details opened. Hakuna change imefanywa.</div>
+            </div>
+            </article>
+
+            <article class="hero-chat-screen" data-deck-card data-deck-title="Human concierge handoff" aria-label="Human concierge handoff">
+            <div class="mini-chat-head"><img src="/assets/saviku-mark-mono.svg" alt="" width="24" height="24"><span><b>Savi + Concierge</b><small>2 participants</small></span><span class="hero-screen-chip">Hybrid</span></div>
+            <div class="mini-thread hero-thread">
+              <div class="mini-bubble mini-bubble--out">Niko kwa gate but code haifanyi. <small>18:16 ✓✓</small></div>
+              <div class="mini-bubble mini-bubble--in">Pole! Nakuconnect na concierge sasa.</div>
+              <div class="mini-system-event">Saviku Concierge joined</div>
+              <div class="mini-bubble mini-bubble--human"><b>Concierge</b>Niko hapa James — try <strong>4821#</strong>, then niambie.</div>
+              <div class="native-options"><span>Code worked</span><span>Call me</span></div>
+              <div class="mini-result">Same chat. Human help when it matters.</div>
+            </div>
+            </article>
+
+            <article class="hero-chat-screen" data-deck-card data-deck-title="Meta Coexist" aria-label="Meta Coexist">
+            <div class="mini-chat-head"><img src="/assets/saviku-mark-mono.svg" alt="" width="24" height="24"><span><b>Nyali Villa</b><small>Meta Coexist active</small></span><span class="hero-screen-chip">Host</span></div>
+            <div class="mini-thread hero-thread">
+              <div class="mini-system-event">Amina replied from WhatsApp Business</div>
+              <div class="mini-bubble mini-bubble--human"><b>Amina</b>Guest amefika? Niko offline kidogo.</div>
+              <div class="mini-bubble mini-bubble--in"><b>Savi</b>Yes — check-in confirmed at 18:04. Calendar sync iko live.</div>
+              <div class="mini-bubble mini-bubble--human"><b>Amina</b>Poa. Mshow Wi-Fi iko kwa deal card.</div>
+              <div class="mini-result">Same number · app replies + API automation</div>
+            </div>
+            </article>
+
+            <article class="hero-chat-screen" data-deck-card data-deck-title="Protected M-PESA payment" aria-label="Protected M-PESA payment">
+            <div class="mini-chat-head"><img src="/assets/saviku-mark-mono.svg" alt="" width="24" height="24"><span><b>Savi</b><small>Protected booking</small></span><span class="hero-screen-chip">Guest</span></div>
+            <div class="mini-thread hero-thread">
+              <div class="mini-bubble mini-bubble--in">James, hii ndio secured booking card. Confirm details kabla ulipe.</div>
+              <div class="mini-deal-card">
+                <div class="mini-secure-head"><span><img src="/assets/saviku-mark.svg" alt="" width="17" height="17">Saviku secured</span><span class="lock-mark" aria-label="Secured">🔒</span></div>
+                <span>Nyali Garden Studio</span><b>18–21 Sep · KES 24,000</b><small>Stay · checked in &nbsp; Money · protected</small>
+                <span class="mini-release-clock">Release in <b data-release-countdown data-countdown-seconds="65520">18h 12m</b></span>
+              </div>
+              <div class="native-options"><span>View protected booking</span><span>Open a dispute</span></div>
+              <div class="mini-result">M-PESA till · dispute freezes release</div>
+            </div>
+            </article>
+
+            <article class="hero-chat-screen" data-deck-card data-deck-title="Verification and review sources" aria-label="Verification and review sources">
+            <div class="mini-chat-head"><img src="/assets/saviku-mark-mono.svg" alt="" width="24" height="24"><span><b>Savi</b><small>Host + listing check</small></span><span class="hero-screen-chip">Guest</span></div>
+            <div class="mini-thread hero-thread">
+              <div class="mini-bubble mini-bubble--out">Savi, hii listing iko sawa? <small>14:07 ✓✓</small></div>
+              <div class="mini-bubble mini-bubble--in">Host is <b>T2 verified</b>. Ratings ziko separate:</div>
+              <div class="mini-source-ratings"><span><b>4.9</b>Saviku · 12 protected stays</span><span><b>4.8</b>Airbnb · 66 imported reviews</span></div>
+              <div class="mini-warning-card"><b>Pause before paying</b><span>Payout name differs from verified host.</span><small>Indicator only · si fraud verdict</small></div>
+              <div class="native-options"><span>View host passport</span><span>Ask concierge</span></div>
+              <div class="mini-result">Usilipe off-platform until details match.</div>
+            </div>
+            </article>
         </div>
+        <div data-deck-controls></div>
         <figcaption class="device-badge">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-          <span><strong>Deterministic by design</strong>Buttons and exact matches only — nothing is generated in a money flow.</span>
+          <span><strong>Hybrid by design</strong>Automation, AI routing and human concierge — secured flows stay deterministic.</span>
         </figcaption>
       </figure>
     </div>
@@ -224,27 +278,24 @@
   </section>
 
   <!-- ======================= WHATSAPP USE CASES ====================== -->
-  <section class="band band--deep on-dark chat-showcase" id="examples" aria-labelledby="chat-showcase-title">
-    <div class="wrap">
-      <div class="carousel-head" data-reveal>
-        <div>
-          <p class="eyebrow">Inside the conversation</p>
-          <h2 class="h-lg" id="chat-showcase-title">Every use case, <span class="accent">native to WhatsApp.</span></h2>
-          <p class="lede">Swipe through the host and guest flows. Savi keeps the structured parts native, then brings in a human concierge when the conversation needs one.</p>
-        </div>
-        <div class="carousel-controls" aria-label="Carousel controls">
-          <button class="carousel-button" type="button" data-carousel-prev aria-label="Previous example">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M10 7l-5 5 5 5"/></svg>
-          </button>
-          <button class="carousel-button" type="button" data-carousel-next aria-label="Next example">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M14 7l5 5-5 5"/></svg>
-          </button>
-        </div>
+  <section class="band band--navy on-dark chat-showcase" id="examples" aria-labelledby="chat-showcase-title" data-deck-scope>
+    <div class="wrap split split--sticky">
+      <div data-reveal>
+        <p class="eyebrow">Inside the conversation</p>
+        <h2 class="h-lg" id="chat-showcase-title">Every use case, <span class="accent">native to WhatsApp.</span></h2>
+        <p class="lede">Savi keeps the structured parts native to the app — the choices, the date picker, the payment record — and brings in a human when the conversation needs judgement rather than a button.</p>
+        <ul class="flow-list">
+          <li><span><b>Native choices.</b> List and reply buttons carry every branch, so nothing depends on typing the right words.</span></li>
+          <li><span><b>WhatsApp's own date picker.</b> Ranges get picked, not parsed.</span></li>
+          <li><span><b>Realtime alerts.</b> A collision arrives as a message with fixed next actions.</span></li>
+          <li><span><b>Concierge handoff.</b> A person joins the same thread and the history stays where it is.</span></li>
+          <li><span><b>Protected payment.</b> The deal card and its release window arrive before any money moves.</span></li>
+        </ul>
       </div>
 
-      <div class="carousel-shell" data-carousel data-reveal role="region" aria-roledescription="carousel" aria-label="Saviku WhatsApp use case examples">
-        <div class="chat-carousel" data-carousel-track tabindex="0">
-          <article class="chat-example" aria-label="Host realtime date blocking example">
+      <div class="deck-column">
+        <div class="deck deck--stack" data-deck data-deck-noun="example" data-deck-interval="6000" data-reveal tabindex="0" role="group" aria-roledescription="carousel" aria-label="Saviku WhatsApp use case examples">
+          <article class="chat-example" data-deck-card data-deck-title="Block dates in chat" aria-label="Block dates in chat">
             <div class="chat-example-meta"><span class="audience-chip">Host</span><span>Realtime calendar</span></div>
             <h3>Block dates in chat</h3>
             <p>Native choices and a date picker replace typed commands.</p>
@@ -264,7 +315,7 @@
             </div>
           </article>
 
-          <article class="chat-example" aria-label="Host overlap alert example">
+          <article class="chat-example" data-deck-card data-deck-title="Resolve a collision" aria-label="Resolve a collision">
             <div class="chat-example-meta"><span class="audience-chip">Host</span><span>Overlap alert</span></div>
             <h3>Resolve a collision</h3>
             <p>The event arrives in realtime with fixed next actions.</p>
@@ -280,7 +331,7 @@
             </div>
           </article>
 
-          <article class="chat-example" aria-label="Human concierge handoff example">
+          <article class="chat-example" data-deck-card data-deck-title="Bring in a human" aria-label="Bring in a human">
             <div class="chat-example-meta"><span class="audience-chip audience-chip--both">Host + guest</span><span>Concierge</span></div>
             <h3>Bring in a human</h3>
             <p>Savi handles the route; a concierge handles the nuance.</p>
@@ -297,7 +348,7 @@
             </div>
           </article>
 
-          <article class="chat-example" aria-label="Meta Coexist host example">
+          <article class="chat-example" data-deck-card data-deck-title="Keep your WhatsApp app" aria-label="Keep your WhatsApp app">
             <div class="chat-example-meta"><span class="audience-chip">Host</span><span>Meta Coexist</span></div>
             <h3>Keep your WhatsApp app</h3>
             <p>Your team and Savi can use the same business number.</p>
@@ -313,7 +364,7 @@
             </div>
           </article>
 
-          <article class="chat-example" aria-label="Guest M-PESA protected payment example">
+          <article class="chat-example" data-deck-card data-deck-title="Pay against a record" aria-label="Pay against a record">
             <div class="chat-example-meta"><span class="audience-chip audience-chip--guest">Guest</span><span>Protected payment</span></div>
             <h3>Pay against a record</h3>
             <p>The exact deal and protection state arrive before payment.</p>
@@ -333,7 +384,7 @@
             </div>
           </article>
 
-          <article class="chat-example" aria-label="Guest listing and host verification example">
+          <article class="chat-example" data-deck-card data-deck-title="Check before paying" aria-label="Check before paying">
             <div class="chat-example-meta"><span class="audience-chip audience-chip--guest">Guest</span><span>Safety check</span></div>
             <h3>Check before paying</h3>
             <p>Verification and risk signals come with clear limits.</p>
@@ -350,7 +401,7 @@
             </div>
           </article>
         </div>
-        <p class="carousel-hint">Swipe, drag or use the arrow keys to explore all examples.</p>
+        <p class="carousel-hint">Advances on its own while in view — or use the arrows, dots, swipe and arrow keys.</p>
       </div>
     </div>
   </section>
@@ -399,8 +450,8 @@
         </div>
       </div>
 
-      <div class="guest-examples" data-reveal aria-label="Saviku guest card features">
-        <article class="guest-card guest-card--live">
+      <div class="guest-examples deck deck--stack" data-deck data-deck-until="900" data-deck-noun="card" data-deck-interval="7000" data-reveal tabindex="0" role="group" aria-roledescription="carousel" aria-label="Saviku guest card features">
+        <article class="guest-card guest-card--live" data-deck-card data-deck-title="Protected booking card" aria-label="Protected booking card">
           <div class="card-brand-strip">
             <span class="card-brand"><img src="/assets/saviku-mark.svg" alt="" width="24" height="24"><span><strong>Saviku</strong><small>Booking card</small></span></span>
             <span class="secured-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Secured</span>
@@ -436,7 +487,7 @@
           </ol>
         </article>
 
-        <article class="guest-card">
+        <article class="guest-card" data-deck-card data-deck-title="Host passport" aria-label="Host passport">
           <div class="card-brand-strip">
             <span class="card-brand"><img src="/assets/saviku-mark.svg" alt="" width="24" height="24"><span><strong>Saviku</strong><small>Host passport</small></span></span>
             <span class="secured-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Secured</span>
@@ -470,7 +521,7 @@
           </ol>
         </article>
 
-        <article class="guest-card guest-card--review">
+        <article class="guest-card guest-card--review" data-deck-card data-deck-title="Listing check" aria-label="Listing check">
           <div class="card-brand-strip">
             <span class="card-brand"><img src="/assets/saviku-mark.svg" alt="" width="24" height="24"><span><strong>Saviku</strong><small>Listing check</small></span></span>
             <span class="secured-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Secured</span>
@@ -600,6 +651,6 @@
   </a>
 </div>
 
-<script src="/assets/site.js?v=6" defer></script>
+<script src="/assets/site.js?v=7" defer></script>
 </body>
 </html>

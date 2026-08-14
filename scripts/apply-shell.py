@@ -23,7 +23,7 @@ HEAD_EXTRA = (
 )
 BRAND_IMG = '<img src="/assets/saviku-mark-mono.svg" alt="" width="30" height="30">'
 SKIP = '<a class="skip-link" href="#main">Skip to content</a>'
-SCRIPT = '<script src="/assets/site.js?v=6" defer></script>'
+SCRIPT = '<script src="/assets/site.js?v=7" defer></script>'
 
 FOOTER = (
     '<footer class="site-footer"><div class="wrap footer-doc">'
@@ -40,7 +40,7 @@ for page in PAGES:
     src = original = page.read_text(encoding="utf-8")
 
     # 1. cache-bust the stylesheet and add the icon/theme head tags once
-    src = src.replace("/assets/site.css?v=4", "/assets/site.css?v=10")
+    src = re.sub(r"/assets/site\.css\?v=\d+", "/assets/site.css?v=11", src)
     if 'rel="icon"' not in src:
         src = src.replace("</head>", HEAD_EXTRA + "</head>", 1)
 

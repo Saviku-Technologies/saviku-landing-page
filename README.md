@@ -98,9 +98,43 @@ The knockout between the two bubbles is an SVG `<mask>`, not a white halo, so th
 gap is genuinely transparent and the mark works on navy, on white and in the
 `-mono` variants alike.
 
+## Example decks
+
+Every set of example screens on the page — the hero phone, the "inside the
+conversation" flows and the guest cards — is driven by one engine in `site.js`.
+Markup declares only the cards; the whole control bar (prev/next, dots, pause)
+is built at runtime, so nothing dead renders when JS is off.
+
+```html
+<div class="deck deck--stack" data-deck data-deck-noun="example"
+     tabindex="0" role="group" aria-roledescription="carousel" aria-label="...">
+  <article data-deck-card data-deck-title="Block dates in chat">...</article>
+</div>
+```
+
+| attribute | effect |
+|---|---|
+| `data-deck` | marks the deck (exact attribute — `data-deck-*` never matches) |
+| `data-deck-card` | one card; `data-deck-title` names it for dots and announcements |
+| `data-deck-interval` | ms between auto-advances (default 5600) |
+| `data-deck-compact` | dots + pause only, no prev/next arrows (used in the hero) |
+| `data-deck-until="900"` | deck below that width, plain grid at or above it (guest cards) |
+| `data-deck-scope` + `data-deck-controls` | render the control bar into a specific slot instead of after the deck |
+
+How it behaves: cards stack in a **single CSS grid cell**, so the deck is exactly
+as tall as its tallest card with no measuring, no absolute positioning and no
+layout shift when it advances. `.is-ready` is added by JS — before that the cards
+are a plain readable stack. Autoplay runs only while the deck is in view and
+stops on mouse hover, on keyboard focus, and permanently once the visitor presses
+pause (WCAG 2.2.2). Hover/focus pausing deliberately ignores touch input, since a
+tap fires `pointerenter` with no matching `pointerleave` and would otherwise
+strand autoplay off on a phone. Manual control: buttons, dots, swipe, arrow keys.
+Under `prefers-reduced-motion` autoplay never starts and the controls still work.
+
 ## Scripts
 
 ```bash
+node   scripts/test-deck.js        # deck engine behaviour (44 checks, DOM stub)
 python3 scripts/check-site.py     # tag balance, dead links, unknown classes, undefined tokens, dead teal
 python3 scripts/apply-shell.py    # re-apply the shared header/footer to every document page (idempotent)
 python3 scripts/build-brand.py    # regenerate the brand SVGs
