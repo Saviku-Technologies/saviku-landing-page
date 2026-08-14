@@ -79,6 +79,47 @@
     }
   }
 
+  /* ---- WhatsApp example carousel --------------------------------------- */
+  var carousels = document.querySelectorAll("[data-carousel]");
+  Array.prototype.forEach.call(carousels, function (root) {
+    var track = root.querySelector("[data-carousel-track]");
+    var section = root.closest(".chat-showcase");
+    var prev = section ? section.querySelector("[data-carousel-prev]") : null;
+    var next = section ? section.querySelector("[data-carousel-next]") : null;
+    var carouselQueued = false;
+    if (!track || !prev || !next) return;
+
+    function carouselStep() {
+      var card = track.querySelector(".chat-example");
+      if (!card) return track.clientWidth * .85;
+      var styles = window.getComputedStyle(track);
+      var gap = parseFloat(styles.columnGap || styles.gap) || 0;
+      return card.getBoundingClientRect().width + gap;
+    }
+
+    function updateCarousel() {
+      carouselQueued = false;
+      prev.disabled = track.scrollLeft <= 8;
+      next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 8;
+    }
+
+    function queueCarouselUpdate() {
+      if (carouselQueued) return;
+      carouselQueued = true;
+      window.requestAnimationFrame(updateCarousel);
+    }
+
+    prev.addEventListener("click", function () {
+      track.scrollBy({ left: -carouselStep(), behavior: reduced.matches ? "auto" : "smooth" });
+    });
+    next.addEventListener("click", function () {
+      track.scrollBy({ left: carouselStep(), behavior: reduced.matches ? "auto" : "smooth" });
+    });
+    track.addEventListener("scroll", queueCarouselUpdate, { passive: true });
+    window.addEventListener("resize", queueCarouselUpdate, { passive: true });
+    updateCarousel();
+  });
+
   /* ---- scroll-driven bits: header state, step rail, mobile CTA ---------- */
   var header = document.querySelector(".site-header");
   var mobileCta = document.querySelector("[data-mobile-cta]");
