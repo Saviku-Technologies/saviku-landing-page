@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="132" height="132" viewBox="0 0 132 132">
+  <!-- Saviku brand texture: the gold check motif, tiled. Used at low opacity behind
+       navy sections. Seamless on a 132px grid. -->
+  <g fill="none" stroke="#F4BE4C" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 40 L26 52 L52 22"/>
+    <path d="M80 106 L92 118 L118 88"/>
+    <path d="M-4 106 L8 118 L34 88"/>
+    <path d="M98 40 L110 52 L136 22"/>
+  </g>
+</svg>

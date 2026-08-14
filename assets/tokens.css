@@ -1,0 +1,82 @@
+/* Saviku — Harbor design tokens
+   Single source of truth for colour. Spec: docs/HANDOFF-color-system.md.
+   Both contexts import this file; the door test decides which set you use:
+     reached from a WhatsApp conversation -> PRODUCT (green)
+     represents the company / visited directly -> BRAND (navy)   <- saviku.co
+   The teal family (#39A8AF, #2C8189) is RETIRED. Do not reintroduce it. */
+
+:root {
+  /* ---- Brand (navy context: saviku.co, dashboard, docs, invoices) ---- */
+  --saviku-navy: #0D3592;
+  --saviku-navy-deep: #091B4F;
+  --saviku-green: #1E9E57;          /* accent only — icons, small highlights, success */
+  --saviku-gold: #F4BE4C;           /* brand primary CTA */
+  --saviku-gold-text: #412402;      /* text on gold — never white */
+  --saviku-on-navy-muted: #B5C8F0;
+  --brand-chip: #E8EDFA;            /* navy-tinted selected fill */
+
+  /* ---- Product (green context: lead cards, date picker, in-WhatsApp forms) ---- */
+  --product-green: #0B6B53;
+  --product-green-dark: #085240;
+  --product-chip: #E7F5EF;
+  --wa-green: #25D366;              /* WhatsApp actions only */
+  --wa-chat-bg: #EFE7DD;
+
+  /* ---- Neutrals ---- */
+  --saviku-white: #F4F8FA;
+  --saviku-gray: #E3EBF0;
+  --ink: #111B21;
+  --ink-soft: #54656F;
+  --ink-faint: #8696A0;
+
+  /* ---- Semantic ---- */
+  --success: #1E9E4A;
+  --warning: #E8A317;
+  --error: #D8402F;
+
+  /* ---- Type ----
+     System stack only by default: no webfont cost, no FOUT, and the same
+     rendering as the in-WhatsApp surfaces. Montserrat ExtraBold is permitted
+     for h1/h2 on BRAND pages only (never product) — to enable it, drop
+     montserrat-800.woff2 into assets/fonts/, uncomment the @font-face below,
+     and prepend "Montserrat" to --font-display. */
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI Variable Text",
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: var(--font-sans);
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  /* ---- Space & layout ---- */
+  --gutter: clamp(18px, 5vw, 44px);
+  --max: 1120px;
+  --measure: 62ch;
+  --section-y: clamp(52px, 8vw, 96px);
+
+  /* ---- Radius ---- */
+  --r-sm: 9px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --r-pill: 999px;
+
+  /* ---- Elevation (website language: lighter than the product cards) ---- */
+  --shadow-xs: 0 1px 2px rgba(9, 27, 79, .06);
+  --shadow-sm: 0 2px 6px rgba(9, 27, 79, .07);
+  --shadow-md: 0 10px 28px rgba(9, 27, 79, .10);
+  --shadow-lg: 0 24px 60px rgba(9, 27, 79, .18);
+
+  /* ---- Motion ---- */
+  --ease: cubic-bezier(.22, 1, .36, 1);
+  --dur-fast: 140ms;
+  --dur: 260ms;
+  --dur-slow: 620ms;
+}
+
+/*
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/montserrat-800.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+*/

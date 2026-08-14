@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="103 195 531 531" width="480" height="480" role="img" aria-label="Saviku">
+  <defs>
+    <mask id="knock" maskUnits="userSpaceOnUse" x="103" y="195" width="531" height="531">
+      <rect x="103" y="195" width="531" height="531" fill="#fff"/>
+      <path d="M199 344 H400 A64 64 0 0 1 464 408 V530 A64 64 0 0 1 400 594 H252 L176 659 L179 590 A55 55 0 0 1 135 535 V408 A64 64 0 0 1 199 344 Z" fill="#000" stroke="#000"
+            stroke-width="74" stroke-linecap="round" stroke-linejoin="round"/>
+    </mask>
+  </defs>
+  <g mask="url(#knock)" fill="#FFFFFF">
+    <path d="M356 248 H548 A68 68 0 0 1 616 316 V444 A68 68 0 0 1 548 512 H356 A68 68 0 0 1 288 444 V316 A68 68 0 0 1 356 248 Z"/>
+    <path d="M491 504 H570 V576 Z"/>
+  </g>
+  <path d="M199 344 H400 A64 64 0 0 1 464 408 V530 A64 64 0 0 1 400 594 H252 L176 659 L179 590 A55 55 0 0 1 135 535 V408 A64 64 0 0 1 199 344 Z" fill="none" stroke="#FFFFFF"
+        stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M232 471 L279 516 L371 425" fill="none" stroke="#FFFFFF"
+        stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

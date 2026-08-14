@@ -3,42 +3,371 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Saviku — safer bookings and transactions</title>
-  <meta name="description" content="Saviku helps people verify listings, coordinate bookings and transact with clear, recorded terms through Savi on WhatsApp.">
+  <title>Saviku — your booking calendar, run from WhatsApp</title>
+  <meta name="description" content="Saviku is a WhatsApp-first calendar hub for hosts and agents in Kenya. Block dates once and every connected channel follows. Savi runs the whole thing in chat — no app, no dashboard, no double bookings.">
   <link rel="canonical" href="https://saviku.co/">
-  <link rel="stylesheet" href="/assets/site.css?v=4">
+  <meta name="theme-color" content="#091B4F">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"><link rel="icon" sizes="512x512" href="/assets/icon-512.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Saviku">
+  <meta property="og:url" content="https://saviku.co/">
+  <meta property="og:title" content="Saviku — your booking calendar, run from WhatsApp">
+  <meta property="og:description" content="Block dates once. Every connected channel follows. Savi runs your calendar in WhatsApp — no app, no dashboard, no double bookings.">
+  <meta property="og:image" content="https://saviku.co/assets/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Saviku Technologies">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/assets/site.css?v=6">
 </head>
-<body>
-  <header class="site-header"><nav class="nav">
-    <a class="brand" href="/"><img src="/assets/saviku-logo.png" alt="">Saviku</a>
-    <div class="nav-links"><a href="#how">How it works</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy</a></div>
-  </nav></header>
-  <main class="wrap">
-    <section class="hero">
-      <span class="eyebrow">Trust before transaction</span>
-      <h1>Book and transact with a clearer trail.</h1>
-      <p class="lede">Saviku helps hosts and customers verify listing details, coordinate availability and record protected transactions. Savi keeps the experience simple inside WhatsApp.</p>
-      <div class="actions"><a class="button gold" href="/support.html">Get support</a><a class="button secondary" href="/terms.html">Read the terms</a></div>
-    </section>
-    <section id="how" class="grid" aria-label="How Saviku helps">
-      <article class="card"><h2>Verify</h2><p>Check listing details and risk signals before committing. Automated checks support—not replace—your own judgment.</p></article>
-      <article class="card"><h2>Coordinate</h2><p>Keep availability, booking details and confirmations in one clear, auditable conversation.</p></article>
-      <article class="card"><h2>Protect</h2><p>Use recorded terms and partner-supported payment flows with a clear route for disputes and refunds.</p></article>
-    </section>
-  </main>
-  <footer class="site-footer"><div class="wrap footer-grid">
+<body data-hero="dark">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="/"><img src="/assets/saviku-mark-mono.svg" alt="" width="30" height="30">Saviku</a>
+    <div class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#trust">Trust</a>
+      <a href="#guests">For guests</a>
+      <a href="#faq">FAQ</a>
+      <a href="/support.html">Support</a>
+      <a class="button gold sm" href="https://wa.me/15551354434?text=Hi%20Savi" target="_blank" rel="noopener noreferrer">Chat with Savi</a>
+    </div>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="drawer" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </nav>
+</header>
+
+<div class="drawer" id="drawer" data-open="false" role="dialog" aria-modal="true" aria-label="Main menu" aria-hidden="true">
+  <div class="drawer-top">
+    <a class="brand" href="/"><img src="/assets/saviku-mark-mono.svg" alt="" width="30" height="30">Saviku</a>
+    <button class="nav-toggle" type="button" data-nav-close aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="drawer-links">
+    <a href="#how">How it works</a>
+    <a href="#trust">Trust</a>
+    <a href="#guests">For guests</a>
+    <a href="#faq">FAQ</a>
+    <a href="/support.html">Support</a>
+    <a href="/legal/">Legal</a>
+  </div>
+  <a class="button wa block" href="https://wa.me/15551354434?text=Hi%20Savi" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="20" height="20"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.3-.5.1-1 .1-1.6-.1a11 11 0 0 1-4.4-2.7 10 10 0 0 1-2.1-3.2c-.3-.7-.3-1.4 0-2 .2-.4.5-.7.7-.9.2-.2.4-.2.6-.2h.4c.2 0 .4 0 .5.4l.8 1.8c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4 0 .7.6 1.1 1.5 2 2.7 2.6.3.2.5.1.7-.1l.8-1c.2-.2.4-.2.6-.1l1.7.8c.3.1.4.3.4.5 0 .2 0 .6-.3 1.1Z"/></svg>
+    Chat with Savi on WhatsApp
+  </a>
+  <p class="drawer-foot">Saviku Technologies · Nairobi</p>
+</div>
+
+<main id="main">
+
+  <!-- ============================== HERO ============================== -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="pill"><span class="dot"></span>Savi is live on WhatsApp</span>
+        <h1 class="h-xl">Your booking calendar, <span class="accent">run from a chat.</span></h1>
+        <p class="lede">Saviku is a WhatsApp-first calendar hub for hosts and agents. Block dates once and every connected channel follows — no app to install, no dashboard to learn, no double bookings to apologise for.</p>
+        <div class="actions">
+          <a class="button gold" href="https://wa.me/15551354434?text=Hi%20Savi" target="_blank" rel="noopener noreferrer">
+            Start on WhatsApp
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="17" height="17" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="button ghost" href="#how">See how it works</a>
+        </div>
+        <p class="hero-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>
+          Every reply is a fixed option or button. Savi never improvises your bookings.
+        </p>
+        <ul class="chips">
+          <li>Airbnb &amp; Booking.com sync</li>
+          <li>Overlap alerts</li>
+          <li>English &amp; Kiswahili</li>
+          <li>Escrow-backed deals</li>
+        </ul>
+      </div>
+
+      <!-- the product, drawn in CSS: PRODUCT context lives inside the frame -->
+      <figure class="device">
+        <div class="device-screen" role="img" aria-label="A WhatsApp conversation with Savi: the host picks a unit from buttons, sends the dates 12/09 to 15/09, and Savi confirms the block was pushed to Airbnb, Booking.com and Vrbo with no overlaps found.">
+          <div class="chat-head">
+            <img src="/assets/saviku-mark-mono.svg" alt="" width="26" height="26">
+            <span class="chat-who"><strong>Savi</strong><span>Saviku Calendar Hub · online</span></span>
+          </div>
+          <div class="chat">
+            <div class="bubble bubble--in">Which unit are you blocking?<time>09:41</time></div>
+            <div class="qr"><span>Kileleshwa 1BR</span><span>Nyali Villa</span><span>Show all units</span></div>
+            <div class="bubble bubble--out">Kileleshwa 1BR<time>09:41 <span class="tick">✓✓</span></time></div>
+            <div class="bubble bubble--in">Send the dates as <b>12/09 – 15/09</b>.<time>09:41</time></div>
+            <div class="bubble bubble--out">12/09 – 15/09<time>09:42 <span class="tick">✓✓</span></time></div>
+            <div class="chat-card"><strong>✓ Blocked · 3 nights</strong><span>Airbnb, Booking.com and Vrbo updated. No overlaps found.</span></div>
+          </div>
+        </div>
+        <figcaption class="device-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          <span><strong>Deterministic by design</strong>Buttons and exact matches only — nothing is generated in a money flow.</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================ CHANNELS ============================ -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-row">
+      <span>Airbnb</span><span>Booking.com</span><span>Expedia</span><span>Vrbo</span><span>Any iCal feed</span><span>Google Calendar</span>
+      <span>Airbnb</span><span>Booking.com</span><span>Expedia</span><span>Vrbo</span><span>Any iCal feed</span><span>Google Calendar</span>
+    </div>
+  </div>
+  <div class="band band--tight">
+    <p class="wrap small">Connect the channels you already sell on — Airbnb, Booking.com, Expedia and Vrbo through our channel manager, plus any calendar that publishes an iCal link.</p>
+  </div>
+
+  <!-- =========================== HOW IT WORKS ========================= -->
+  <section class="band band--white" id="how">
+    <div class="wrap split split--sticky">
+      <div data-reveal>
+        <p class="eyebrow">How it works</p>
+        <h2 class="h-lg">Four messages from “hello” to <span class="accent">one calendar.</span></h2>
+        <p class="lede">Onboarding is a conversation, not a form. A web page opens only where a bigger screen genuinely helps — a photo, a signature, a date grid.</p>
+        <div class="actions">
+          <a class="button secondary" href="https://wa.me/15551354434?text=Hi%20Savi" target="_blank" rel="noopener noreferrer">Try it with your own unit</a>
+        </div>
+      </div>
+
+      <ol class="steps" data-steps data-reveal>
+        <li class="step">
+          <h3 class="h-sm">Say hello to Savi</h3>
+          <p>Message the Saviku number. Savi asks your name, whether you host or manage for others, and how many units you run. That is the whole sign-up.</p>
+          <span class="tag">~60 seconds</span>
+        </li>
+        <li class="step">
+          <h3 class="h-sm">Add a unit</h3>
+          <p>Name it, paste the listing link, and Savi pulls what it can read from the page. Anything it cannot read, it asks for — one field at a time.</p>
+          <span class="tag">No spreadsheet</span>
+        </li>
+        <li class="step">
+          <h3 class="h-sm">Connect your channels</h3>
+          <p>Link Airbnb, Booking.com, Expedia or Vrbo, or paste an iCal export from anywhere else. Saviku also publishes a clean busy-only feed you can import back — no guest details in it.</p>
+          <span class="tag">Two-way sync</span>
+        </li>
+        <li class="step">
+          <h3 class="h-sm">Block once, everywhere</h3>
+          <p>Send a date range in chat. Saviku writes it to every connected channel and re-checks each feed on a rolling cycle, so an overlap reaches your phone as an alert instead of reaching a guest as a cancellation.</p>
+          <span class="tag">Alerts, not surprises</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============================ FEATURES ============================ -->
+  <section class="band">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">What Savi does</p>
+        <h2 class="h-lg">A hub, not another <span class="accent">inbox.</span></h2>
+      </div>
+      <div class="features" data-reveal>
+        <article class="feature">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 11h18M8 15h3"/></svg></div>
+          <h3>Central date blocking</h3>
+          <p>One date range in chat, written to every channel you have linked.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M12 18v3M4.2 7.5l2.6 1.5M17.2 15l2.6 1.5M4.2 16.5l2.6-1.5M17.2 9l2.6-1.5"/><circle cx="12" cy="12" r="3.4"/></svg></div>
+          <h3>Overlap alerts</h3>
+          <p>Two bookings landing on one night raise a message before a guest ever hears about it.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h10a3 3 0 0 1 3 3v6"/><path d="M14 12l3 3 3-3"/><path d="M20 18H10a3 3 0 0 1-3-3V9"/><path d="M10 12L7 9 4 12"/></svg></div>
+          <h3>Two-way channel sync</h3>
+          <p>Reservations come in, your blocks go out, and each feed is re-read on a rolling schedule.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2.5"/><path d="M7 9h6M7 13h4"/><path d="M16.5 12.5l1.5 1.5 2.5-2.5"/></svg></div>
+          <h3>Shareable deal cards</h3>
+          <p>A clean card for the stay — dates, price, terms — that a guest can open and act on.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-3.6 7-9V6l-7-3-7 3v6c0 5.4 7 9 7 9z"/><path d="M9.4 12.2l1.9 1.9 3.7-3.9"/></svg></div>
+          <h3>Escrow-backed payments</h3>
+          <p>Funds move under recorded terms through licensed payment partners, with a defined dispute window.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2z"/><path d="M8.5 10h7M8.5 13h4"/></svg></div>
+          <h3>English &amp; Kiswahili</h3>
+          <p>Savi answers in the language of the conversation, with the same fixed options in both.</p>
+        </article>
+      </div>
+
+      <ul class="stats stack-lg" data-reveal>
+        <li><b>0</b><span>apps to install</span></li>
+        <li><b>4+</b><span>channels, plus any iCal feed</span></li>
+        <li><b>~7 min</b><span>rolling calendar re-check</span></li>
+        <li><b>2</b><span>languages, one script</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================== TRUST ============================= -->
+  <section class="band band--deep on-dark" id="trust">
+    <div class="wrap split">
+      <div data-reveal>
+        <p class="eyebrow">Trust, in tiers</p>
+        <h2 class="h-lg">Verification you climb when the value is <span class="accent">obvious.</span></h2>
+        <p class="lede">Nobody uploads an ID to block a date. Each tier unlocks something specific, and the checks only appear when you reach for the thing they protect.</p>
+        <p class="small">Payment, holding and settlement can be performed by licensed payment or custody partners. Saviku does not represent that it independently holds regulated client funds.</p>
+      </div>
+      <ol class="ladder" data-reveal>
+        <li class="rung">
+          <span class="rung-key">T0</span>
+          <div class="rung-text"><strong>Registered</strong><span>Your WhatsApp number, a name, a role. Unlocks the Calendar Hub and listing checks.</span></div>
+        </li>
+        <li class="rung">
+          <span class="rung-key">T1</span>
+          <div class="rung-text"><strong>ID-verified</strong><span>Government ID and a liveness selfie, with the payout name matched against the verified name. Unlocks escrow payouts and the agent registry.</span></div>
+        </li>
+        <li class="rung">
+          <span class="rung-key">T2</span>
+          <div class="rung-text"><strong>Property-verified</strong><span>Location-stamped photos taken at the unit, plus a bill, lease or title. Unlocks the public verified-host badge.</span></div>
+        </li>
+        <li class="rung">
+          <span class="rung-key">T3</span>
+          <div class="rung-text"><strong>Field-verified</strong><span>A Saviku verifier visits in person. Unlocks the premium badge and faster escrow release.</span></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============================= GUESTS ============================= -->
+  <section class="band band--white" id="guests">
+    <div class="wrap split">
+      <div data-reveal>
+        <p class="eyebrow">For guests &amp; buyers</p>
+        <h2 class="h-lg">Ask for the card, <span class="accent">not the promise.</span></h2>
+        <p class="lede">The same records that keep a host's calendar straight are what a guest gets to see before paying anyone. No account needed to read one.</p>
+        <div class="actions">
+          <a class="button secondary" href="/terms.html">Read the platform terms</a>
+        </div>
+      </div>
+      <div class="grid" data-reveal>
+        <article class="card">
+          <h3>A deal card, not a screenshot</h3>
+          <p>Dates, price, deposit and the refund policy that applies — recorded at the moment you accept, and still readable afterwards.</p>
+        </article>
+        <article class="card">
+          <h3>A host passport</h3>
+          <p>What has actually been verified, how many deals closed through escrow, and reviews — not self-declared claims.</p>
+        </article>
+        <article class="card">
+          <h3>Listing checks with limits</h3>
+          <p>Savi flags signals like payment pressure and mismatched details. These are informational indicators, never a guarantee — inspect before you commit.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================== FAQ ============================== -->
+  <section class="band" id="faq">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Questions</p>
+        <h2 class="h-lg">The short answers.</h2>
+      </div>
+      <div class="faq" data-reveal>
+        <details>
+          <summary>Do I need to install anything?</summary>
+          <p>No. Saviku runs inside WhatsApp on the number you already use. A web page opens only for the few things a bigger screen does better — a document photo, a signature, a date grid — and it takes you straight back to the chat.</p>
+        </details>
+        <details>
+          <summary>Is a bot answering me?</summary>
+          <p>Savi is a fixed script, not a chatbot with opinions. Every prompt is a set message with buttons or numbered options, and your input is matched exactly. Nothing about money or identity is ever generated — unrecognised input just gets the options again.</p>
+        </details>
+        <details>
+          <summary>Which channels can I connect?</summary>
+          <p>Airbnb, Booking.com, Expedia and Vrbo through our channel manager, plus any platform that gives you an iCal export link. Saviku also publishes a busy-only feed per unit that you can import elsewhere; it carries dates, never guest or booking details.</p>
+        </details>
+        <details>
+          <summary>What happens if two bookings collide?</summary>
+          <p>Saviku re-reads every connected feed on a rolling cycle and reconciles it against what it already holds. An overlap raises an alert to your phone with both stays named, so you decide what happens next.</p>
+        </details>
+        <details>
+          <summary>Who holds the money in an escrow deal?</summary>
+          <p>Payment, holding, settlement and refund services can be performed by licensed payment or custody partners. Saviku records the terms, the deal and the release conditions, and shows them before anyone confirms.</p>
+        </details>
+        <details>
+          <summary>Can agents and property managers use it?</summary>
+          <p>Yes. Agents follow the same verification ladder plus referee confirmations, and get a shareable profile that shows deals completed through escrow and any diversion reports — nothing self-declared.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== CTA =============================== -->
+  <section class="cta">
+    <div class="wrap">
+      <h2 class="h-lg">One message is the whole <span class="accent">setup.</span></h2>
+      <p>Send “Hi Savi” and block your first date range before this page finishes loading on someone else's phone.</p>
+      <div class="actions">
+        <a class="button dark" href="https://wa.me/15551354434?text=Hi%20Savi" target="_blank" rel="noopener noreferrer">
+          Open WhatsApp
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="17" height="17" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="button link" href="/support.html">or talk to a human first</a>
+      </div>
+      <p class="small stack">Saviku Technologies · Nairobi, Kenya</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
     <div>
-      <a class="brand" href="/"><img src="/assets/saviku-logo.png" alt="">Saviku</a>
-      <a class="whatsapp-link" href="https://wa.me/15551354434?text=Hi%20Savi" target="_blank" rel="noopener noreferrer" aria-label="Chat with Savi on WhatsApp">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M20.2 11.7a8.2 8.2 0 0 1-12.1 7.2L3.5 20l1.2-4.4A8.2 8.2 0 1 1 20.2 11.7Z"/>
-          <path d="M8.1 7.8c.2-.4.5-.4.8-.4h.4c.2 0 .4.1.5.4l.8 1.8c.1.3.1.5-.1.7l-.7.8c-.2.2-.1.5 0 .7.7 1.3 1.7 2.3 3 3 .3.2.5.2.7 0l.9-1.1c.2-.2.4-.3.7-.2l1.8.9c.3.1.4.4.4.6 0 .5-.2 1.5-1 2.1-.7.6-1.7.8-2.7.5-1.2-.3-2.7-1-4.3-2.4-1.3-1.2-2.3-2.6-2.8-3.8-.5-1.1-.5-2.1-.1-2.9l.7-.7Z"/>
-        </svg>
-        <span><strong>Chat with Savi</strong></span>
+      <img class="lockup" src="/assets/saviku-lockup-mono.svg" alt="Saviku Technologies" width="148" height="44">
+      <p class="footer-tag">The calendar hub that lives where your guests already message you.</p>
+      <a class="whatsapp-link" href="https://wa.me/15551354434?text=Hi%20Savi" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.3-.5.1-1 .1-1.6-.1a11 11 0 0 1-4.4-2.7 10 10 0 0 1-2.1-3.2c-.3-.7-.3-1.4 0-2 .2-.4.5-.7.7-.9.2-.2.4-.2.6-.2h.4c.2 0 .4 0 .5.4l.8 1.8c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4 0 .7.6 1.1 1.5 2 2.7 2.6.3.2.5.1.7-.1l.8-1c.2-.2.4-.2.6-.1l1.7.8c.3.1.4.3.4.5 0 .2 0 .6-.3 1.1Z"/></svg>
+        <span>Chat with Savi</span>
       </a>
     </div>
-    <div><strong>Legal</strong><a href="/terms.html">Platform terms</a><a href="/privacy.html">Privacy</a><a href="/acceptable-use.html">Acceptable use</a><a href="/data-deletion.html">Data deletion</a></div>
-    <div><strong>Help</strong><a href="/support.html">Support</a><a href="/legal/">All legal documents</a></div>
-  </div></footer>
+    <div>
+      <strong>Product</strong>
+      <a href="#how">How it works</a>
+      <a href="#trust">Trust &amp; verification</a>
+      <a href="#guests">For guests</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div>
+      <strong>Legal</strong>
+      <a href="/terms.html">Platform terms</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/acceptable-use.html">Acceptable use</a>
+      <a href="/data-deletion.html">Data deletion</a>
+      <a href="/legal/">All documents</a>
+    </div>
+    <div>
+      <strong>Help</strong>
+      <a href="/support.html">Support</a>
+      <a href="mailto:support@saviku.co">support@saviku.co</a>
+    </div>
+  </div>
+  <div class="wrap footer-legal">
+    <p>Saviku is a technology platform. Unless expressly stated for a specific service, Saviku is not the host, guest, buyer, seller, agent, property manager, insurer or bank supplying the underlying accommodation, goods or services. Automated listing checks are informational risk indicators, may be incomplete or wrong, and are not a guarantee that a person, property or transaction is genuine or safe.</p>
+    <p>© <span data-year>2026</span> Saviku Technologies. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="mobile-cta" data-mobile-cta>
+  <p><b>Block a date in one message</b>Savi answers on WhatsApp</p>
+  <a class="button wa sm" href="https://wa.me/15551354434?text=Hi%20Savi" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="17" height="17"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.3-.5.1-1 .1-1.6-.1a11 11 0 0 1-4.4-2.7 10 10 0 0 1-2.1-3.2c-.3-.7-.3-1.4 0-2 .2-.4.5-.7.7-.9.2-.2.4-.2.6-.2h.4c.2 0 .4 0 .5.4l.8 1.8c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4 0 .7.6 1.1 1.5 2 2.7 2.6.3.2.5.1.7-.1l.8-1c.2-.2.4-.2.6-.1l1.7.8c.3.1.4.3.4.5 0 .2 0 .6-.3 1.1Z"/></svg>
+    Chat
+  </a>
+</div>
+
+<script src="/assets/site.js?v=4" defer></script>
 </body>
 </html>
