@@ -40,7 +40,7 @@ for page in PAGES:
     src = original = page.read_text(encoding="utf-8")
 
     # 1. cache-bust the stylesheet and add the icon/theme head tags once
-    src = src.replace("/assets/site.css?v=4", "/assets/site.css?v=6")
+    src = src.replace("/assets/site.css?v=4", "/assets/site.css?v=7")
     if 'rel="icon"' not in src:
         src = src.replace("</head>", HEAD_EXTRA + "</head>", 1)
 

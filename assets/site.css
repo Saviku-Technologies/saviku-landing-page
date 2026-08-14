@@ -868,6 +868,193 @@ body.is-locked { overflow: hidden; }
   color: var(--saviku-gold);
 }
 
+/* ---------- guest-facing record examples -------------------------------- */
+.guest-section-head {
+  display: grid;
+  gap: 20px;
+  align-items: end;
+  margin-bottom: clamp(26px, 4vw, 42px);
+}
+.guest-section-head .lede { margin-top: 12px; }
+.guest-section-head .actions { margin-top: 0; }
+
+.guest-examples {
+  display: grid;
+  gap: 14px;
+}
+.guest-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--saviku-gray);
+  border-radius: var(--r-xl);
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+}
+.guest-card--review { border-color: rgba(232, 163, 23, .34); }
+.guest-card-top,
+.guest-card-title,
+.guest-record,
+.passport-stats,
+.check-summary { margin-inline: 16px; }
+.guest-card-top {
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 14px;
+}
+.avatar-stack { display: flex; padding-left: 6px; }
+.avatar-stack .avatar { margin-left: -6px; }
+.avatar {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: -.01em;
+  box-shadow: 0 1px 3px rgba(9, 27, 79, .14);
+}
+.avatar--green { background: var(--product-green); }
+.avatar--navy { background: var(--saviku-navy); }
+.avatar--gold { background: var(--saviku-gold); color: var(--saviku-gold-text); }
+.profile-line { display: flex; min-width: 0; align-items: center; gap: 9px; }
+.profile-line > span:last-child { min-width: 0; }
+.profile-line strong,
+.profile-line small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.profile-line strong { color: var(--saviku-navy-deep); font-size: 12.5px; line-height: 1.3; }
+.profile-line small { color: var(--ink-faint); font-size: 10.5px; }
+.example-label {
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.guest-card-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 0 13px;
+  border-top: 1px solid var(--saviku-gray);
+}
+.guest-card-title h3 { font-size: 16.5px; line-height: 1.2; }
+.guest-card-kicker {
+  margin: 0 0 4px;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.state-badge {
+  flex: none;
+  padding: 4px 8px;
+  border-radius: var(--r-pill);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.state-badge--success { background: var(--product-chip); color: var(--product-green-dark); }
+.state-badge--review { background: #FFF4D6; color: #795000; }
+.guest-record {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--saviku-gray);
+  border-radius: var(--r-md);
+  background: var(--saviku-gray);
+}
+.guest-record div { min-width: 0; padding: 9px 10px; background: var(--saviku-white); }
+.guest-record dt { color: var(--ink-faint); font-size: 9.5px; font-weight: 700; text-transform: uppercase; }
+.guest-record dd { margin: 2px 0 0; color: var(--saviku-navy-deep); font-size: 11.5px; font-weight: 700; line-height: 1.35; }
+.passport-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  overflow: hidden;
+  border: 1px solid var(--saviku-gray);
+  border-radius: var(--r-md);
+}
+.passport-stats span { padding: 9px 7px; color: var(--ink-soft); font-size: 9.5px; line-height: 1.3; text-align: center; }
+.passport-stats span + span { border-left: 1px solid var(--saviku-gray); }
+.passport-stats b { display: block; margin-bottom: 2px; color: var(--saviku-navy-deep); font-size: 16px; line-height: 1; }
+.check-summary {
+  padding: 11px 12px;
+  border: 1px solid #F3D68E;
+  border-radius: var(--r-md);
+  background: #FFF9EA;
+}
+.check-summary strong { display: block; color: #624000; font-size: 12px; }
+.check-summary span { display: block; margin-top: 3px; color: #795F28; font-size: 10.5px; line-height: 1.4; }
+.state-events {
+  position: relative;
+  display: grid;
+  gap: 0;
+  margin: 14px 0 0;
+  padding: 10px 16px 12px 32px;
+  border-top: 1px solid var(--saviku-gray);
+  background: var(--saviku-white);
+  list-style: none;
+}
+.state-events::before {
+  content: "";
+  position: absolute;
+  top: 21px;
+  bottom: 21px;
+  left: 21px;
+  width: 1px;
+  background: var(--saviku-gray);
+}
+.state-events li {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0;
+  padding: 5px 0;
+  color: var(--ink-soft);
+  font-size: 10.5px;
+  line-height: 1.3;
+}
+.state-events li::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: -15px;
+  width: 7px;
+  height: 7px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: var(--ink-faint);
+  box-shadow: 0 0 0 1px var(--saviku-gray);
+}
+.state-events .is-done::before { background: var(--saviku-green); }
+.state-events .is-current { color: var(--product-green-dark); font-weight: 700; }
+.state-events .is-current::before { background: var(--saviku-green); box-shadow: 0 0 0 3px var(--product-chip); }
+.state-events .is-alert { color: #795000; font-weight: 700; }
+.state-events .is-alert::before { background: var(--warning); box-shadow: 0 0 0 3px #FFF4D6; }
+.state-events time { flex: none; color: var(--ink-faint); font-family: var(--font-mono); font-size: 9.5px; }
+
+@media (min-width: 720px) {
+  .guest-section-head { grid-template-columns: minmax(0, 1fr) auto; }
+  .guest-examples { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
 /* ---------- split layout -------------------------------------------------- */
 .split {
   display: grid;
