@@ -19,7 +19,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Saviku Technologies">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="/assets/site.css?v=9">
+  <link rel="stylesheet" href="/assets/site.css?v=10">
 </head>
 <body data-hero="dark">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -157,8 +157,8 @@
         </li>
         <li class="step">
           <h3 class="h-sm">Add a unit</h3>
-          <p>Name it, paste the listing link, and Savi pulls what it can read from the page. Anything it cannot read, it asks for — one field at a time.</p>
-          <span class="tag">No spreadsheet</span>
+          <p>Name it, paste the listing link, and Savi pre-fills the details it can verify. Review the unit in a native WhatsApp flow, then connect its OTA channels for realtime sync.</p>
+          <span class="tag">Native WhatsApp flow</span>
         </li>
         <li class="step">
           <h3 class="h-sm">Connect your channels</h3>
@@ -167,7 +167,7 @@
         </li>
         <li class="step">
           <h3 class="h-sm">Block once, everywhere</h3>
-          <p>Send a date range in chat. Saviku pushes it to every connected channel immediately and watches incoming booking events in realtime, so an overlap reaches your phone as an alert instead of reaching a guest as a cancellation.</p>
+          <p>Pick the dates in WhatsApp's native date picker. Saviku pushes the block to every connected channel immediately and watches incoming booking events in realtime, so an overlap reaches your phone as an alert instead of reaching a guest as a cancellation.</p>
           <span class="tag">Alerts, not surprises</span>
         </li>
       </ol>
@@ -321,7 +321,11 @@
               <div class="mini-chat-head"><img src="/assets/saviku-mark-mono.svg" alt="" width="22" height="22"><span><b>Savi</b><small>online</small></span></div>
               <div class="mini-thread">
                 <div class="mini-bubble mini-bubble--in">James, hii ndio deal card. Confirm details kabla ulipe.</div>
-                <div class="mini-deal-card"><span>Nyali Garden Studio</span><b>18–21 Sep · KES 24,000</b><small>M-PESA till · 24h protection</small></div>
+                <div class="mini-deal-card">
+                  <div class="mini-secure-head"><span><img src="/assets/saviku-mark.svg" alt="" width="17" height="17">Saviku secured</span><span class="lock-mark" aria-label="Secured">🔒</span></div>
+                  <span>Nyali Garden Studio</span><b>18–21 Sep · KES 24,000</b><small>Money track · protected</small>
+                  <span class="mini-release-clock">Release in <b data-release-countdown data-countdown-seconds="65520">18h 12m</b></span>
+                </div>
                 <div class="native-options"><span>View protected deal</span><span>Ask a question</span></div>
                 <div class="mini-bubble mini-bubble--out">View protected deal <small>10:44 ✓✓</small></div>
                 <div class="mini-result">No payment number is sent as plain text.</div>
@@ -337,7 +341,8 @@
               <div class="mini-chat-head"><img src="/assets/saviku-mark-mono.svg" alt="" width="22" height="22"><span><b>Savi</b><small>online</small></span></div>
               <div class="mini-thread">
                 <div class="mini-bubble mini-bubble--out">Savi, hii listing iko sawa? <small>14:07 ✓✓</small></div>
-                <div class="mini-bubble mini-bubble--in">Nimecheck. Host is <b>T2 verified</b>, but kuna signal moja ya review.</div>
+                <div class="mini-bubble mini-bubble--in">Nimecheck. Host is <b>T2 verified</b>. Hizi ratings ziko separate:</div>
+                <div class="mini-source-ratings"><span><b>4.9</b>Saviku · 12 protected stays</span><span><b>4.8</b>Airbnb · 66 imported reviews</span></div>
                 <div class="mini-warning-card"><b>Pause before paying</b><span>Payout name differs from verified host.</span><small>Indicator only · si fraud verdict</small></div>
                 <div class="native-options"><span>View host passport</span><span>Ask concierge</span></div>
                 <div class="mini-result">Usilipe off-platform until details match.</div>
@@ -394,42 +399,53 @@
         </div>
       </div>
 
-      <div class="guest-examples" data-reveal aria-label="Simulated Saviku guest card examples">
-        <article class="guest-card">
+      <div class="guest-examples" data-reveal aria-label="Saviku guest card features">
+        <article class="guest-card guest-card--live">
+          <div class="card-brand-strip">
+            <span class="card-brand"><img src="/assets/saviku-mark.svg" alt="" width="24" height="24"><span><strong>Saviku</strong><small>Booking card</small></span></span>
+            <span class="secured-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Secured</span>
+          </div>
           <div class="guest-card-top">
             <div class="avatar-stack" role="img" aria-label="Amina the host and James the guest">
               <span class="avatar avatar--photo avatar--amina"></span>
               <span class="avatar avatar--photo avatar--james"></span>
             </div>
-            <span class="example-label">Simulated example</span>
+            <span class="live-state"><i></i>Live state</span>
           </div>
           <div class="guest-card-title">
             <div>
-              <p class="guest-card-kicker">Stay deal · SVK-2048</p>
+              <p class="guest-card-kicker">Protected stay · VK-2048</p>
               <h3>Nyali Garden Studio</h3>
             </div>
             <span class="state-badge state-badge--success">Protected</span>
           </div>
-          <dl class="guest-record">
-            <div><dt>Dates</dt><dd>18–21 Sep · 3 nights</dd></div>
-            <div><dt>Total</dt><dd>KES 24,000</dd></div>
-            <div><dt>Deposit</dt><dd>KES 7,200 · 24h protection</dd></div>
-            <div><dt>Refunds</dt><dd>Flexible until 16 Sep</dd></div>
-          </dl>
-          <ol class="state-events" aria-label="Deal state events">
-            <li class="is-done"><span>Terms recorded</span><time>10:42</time></li>
-            <li class="is-done"><span>James accepted</span><time>10:44</time></li>
-            <li class="is-current"><span>Paid to M-PESA till · protected</span><time>10:46</time></li>
+          <div class="booking-tracks" aria-label="Current booking state">
+            <div><span>Stay</span><strong>Checked in</strong></div>
+            <div><span>Money</span><strong>Protected</strong></div>
+          </div>
+          <div class="release-window">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Protection window</span>
+            <strong data-release-countdown data-countdown-seconds="65520">18h 12m</strong>
+            <small>before payout can be released</small>
+          </div>
+          <ol class="state-events" aria-label="Independent stay and money state events">
+            <li class="is-done"><span>Funded through M-PESA till</span><time>10:46</time></li>
+            <li class="is-done"><span>Check-in confirmed</span><time>14:00</time></li>
+            <li class="is-current"><span>Funds protected · disputes freeze release</span><time>Now</time></li>
+            <li><span>Payout queued after window</span><time>Next</time></li>
           </ol>
         </article>
 
         <article class="guest-card">
+          <div class="card-brand-strip">
+            <span class="card-brand"><img src="/assets/saviku-mark.svg" alt="" width="24" height="24"><span><strong>Saviku</strong><small>Host passport</small></span></span>
+            <span class="secured-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Secured</span>
+          </div>
           <div class="guest-card-top">
             <div class="profile-line">
               <span class="avatar avatar--photo avatar--amina" role="img" aria-label="Amina Mwangi"></span>
               <span><strong>Amina Mwangi</strong><small>Host since 2025</small></span>
             </div>
-            <span class="example-label">Simulated example</span>
           </div>
           <div class="guest-card-title">
             <div>
@@ -438,10 +454,14 @@
             </div>
             <span class="state-badge state-badge--success">T2</span>
           </div>
-          <div class="passport-stats" aria-label="Host history">
+          <div class="review-sources" aria-label="Review scores by source">
+            <div><span class="review-source review-source--saviku">Saviku</span><b>4.9 / 5</b><small>12 protected-stay reviews</small></div>
+            <div><span class="review-source">Airbnb · imported</span><b>4.8 / 5</b><small>66 OTA reviews</small></div>
+          </div>
+          <div class="passport-stats" aria-label="Protected host history">
             <span><b>12</b>protected stays</span>
-            <span><b>4.9</b>guest rating</span>
             <span><b>0</b>diversion reports</span>
+            <span><b>T2</b>property verified</span>
           </div>
           <ol class="state-events" aria-label="Verification state events">
             <li class="is-done"><span>ID &amp; selfie matched</span><time>12 Jun</time></li>
@@ -451,12 +471,15 @@
         </article>
 
         <article class="guest-card guest-card--review">
+          <div class="card-brand-strip">
+            <span class="card-brand"><img src="/assets/saviku-mark.svg" alt="" width="24" height="24"><span><strong>Saviku</strong><small>Listing check</small></span></span>
+            <span class="secured-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Secured</span>
+          </div>
           <div class="guest-card-top">
             <div class="profile-line">
               <span class="avatar avatar--photo avatar--kevin" role="img" aria-label="Kevin Otieno"></span>
               <span><strong>Kevin Otieno</strong><small>Listing contact</small></span>
             </div>
-            <span class="example-label">Simulated example</span>
           </div>
           <div class="guest-card-title">
             <div>
@@ -493,11 +516,11 @@
         </details>
         <details>
           <summary>Is a bot answering me?</summary>
-          <p>Savi is a fixed script, not a chatbot with opinions. Every prompt is a set message with buttons or numbered options, and your input is matched exactly. Nothing about money or identity is ever generated — unrecognised input just gets the options again.</p>
+          <p>Savi is hybrid: deterministic automation handles structured actions and keeps every money or identity step on fixed, auditable paths; AI helps understand eligible free-text requests and route them to approved actions; and a human concierge steps in when context or judgement is needed. AI never invents payment, identity or release instructions.</p>
         </details>
         <details>
           <summary>Which channels can I connect?</summary>
-          <p>Airbnb, Booking.com, Expedia and Vrbo connect with realtime two-way sync. Calendar feeds may still be used to import busy dates from other sources, but they are a fallback rather than the primary sync path.</p>
+          <p>Airbnb, Booking.com, Expedia and Vrbo connect through realtime two-way channel sync. Reservations flow into Saviku and availability updates flow back out without waiting for a scheduled calendar refresh.</p>
         </details>
         <details>
           <summary>What happens if two bookings collide?</summary>
@@ -577,6 +600,6 @@
   </a>
 </div>
 
-<script src="/assets/site.js?v=5" defer></script>
+<script src="/assets/site.js?v=6" defer></script>
 </body>
 </html>

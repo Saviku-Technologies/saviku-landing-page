@@ -79,6 +79,27 @@
     }
   }
 
+  /* ---- presentational escrow countdown (recorded server time is authoritative) */
+  var releaseCounters = document.querySelectorAll("[data-release-countdown]");
+  Array.prototype.forEach.call(releaseCounters, function (counter) {
+    var duration = Math.max(0, parseInt(counter.getAttribute("data-countdown-seconds"), 10) || 0);
+    var dueAt = Date.now() + duration * 1000;
+    var timer = null;
+
+    function renderCountdown() {
+      var left = Math.max(0, Math.floor((dueAt - Date.now()) / 1000));
+      var hours = Math.floor(left / 3600);
+      var minutes = Math.floor((left % 3600) / 60);
+      var seconds = left % 60;
+      counter.textContent = hours + "h " + String(minutes).padStart(2, "0") + "m " + String(seconds).padStart(2, "0") + "s";
+      counter.setAttribute("aria-label", hours + " hours " + minutes + " minutes remaining");
+      if (!left && timer) window.clearInterval(timer);
+    }
+
+    renderCountdown();
+    timer = window.setInterval(renderCountdown, 1000);
+  });
+
   /* ---- WhatsApp example carousel --------------------------------------- */
   var carousels = document.querySelectorAll("[data-carousel]");
   Array.prototype.forEach.call(carousels, function (root) {
