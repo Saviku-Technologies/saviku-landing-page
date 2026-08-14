@@ -1118,6 +1118,13 @@ body.is-locked { overflow: hidden; }
 }
 .state-badge--success { background: var(--product-chip); color: var(--product-green-dark); }
 .state-badge--review { background: #FFF4D6; color: #795000; }
+.hold-copy {
+  margin: 0 16px 10px;
+  color: var(--ink-soft);
+  font-size: 10.5px;
+  line-height: 1.5;
+}
+.hold-copy strong { color: var(--saviku-navy-deep); }
 .booking-tracks {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
