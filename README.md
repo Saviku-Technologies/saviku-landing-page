@@ -1,8 +1,8 @@
 # saviku.co
 
-Static marketing + legal site for Saviku. No build step, no dependencies — plain
-HTML, two CSS files and one small JS file. Deployed as a static site with
-`_headers` and `_redirects`.
+Static marketing + legal site for Saviku. No dependencies — plain HTML, two CSS files and one
+small JS file. Netlify runs `node scripts/stage-site.js` to copy only public files into `dist/`,
+then publishes that directory with `_headers` and `_redirects`.
 
 ## Run it locally
 
@@ -149,3 +149,18 @@ python3 scripts/build-raster.py   # regenerate og-cover.png and the app icons
   design — they have to match the WhatsApp chat context, not the OS theme.
 - If a true vector of the logo becomes available, drop it in and retire the
   traced geometry (see **Brand assets** above).
+
+
+## September 2026 PMS review
+
+- Channel updates are asynchronous; overlapping incoming OTA bookings require review. The page
+  must not promise that cross-channel double-booking is impossible or that delivery has a fixed SLA.
+- The stays board can amend manual bookings. OTA amendments belong on the originating channel;
+  paid Saviku bookings retain their existing cancellation/refund flow and support for date changes.
+- Market shipped identity checks, not the planned T2/T3 property/field verification tiers.
+- Protected-hold claims apply to Saviku-paid bookings, not OTA-collected payments.
+- Asset filenames are stable, so browsers must revalidate them rather than cache them immutably.
+
+Production is the existing Netlify project `saviku` at https://saviku.co. Deploy only public
+HTML, `legal/`, `assets/`, `_headers`, `_redirects`, `robots.txt` and `sitemap.xml`; exclude Git
+metadata, design sources and maintenance scripts from the published directory.

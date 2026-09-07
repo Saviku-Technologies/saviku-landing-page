@@ -1,0 +1,3 @@
+[build]
+  command = "node scripts/stage-site.js"
+  publish = "dist"
