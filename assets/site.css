@@ -1704,7 +1704,7 @@ body.is-locked { overflow: hidden; }
 }
 .mini-result { margin-top: auto; background: #e3f3ff; color: #31586d; }
 .mini-alert-card,
-.mini-deal-card,
+.mini-booking-card,
 .mini-warning-card {
   display: grid;
   align-self: stretch;
@@ -1718,10 +1718,10 @@ body.is-locked { overflow: hidden; }
   line-height: 1.35;
 }
 .mini-alert-card span + span { padding-top: 4px; border-top: 1px solid rgba(74, 51, 5, .13); }
-.mini-deal-card { border-left-color: var(--product-green); background: var(--product-chip); color: var(--product-green-dark); }
-.mini-deal-card span { font-size: 9px; }
-.mini-deal-card b { font-size: 11px; }
-.mini-deal-card small { color: var(--ink-soft); }
+.mini-booking-card { border-left-color: var(--product-green); background: var(--product-chip); color: var(--product-green-dark); }
+.mini-booking-card span { font-size: 9px; }
+.mini-booking-card b { font-size: 11px; }
+.mini-booking-card small { color: var(--ink-soft); }
 .mini-secure-head {
   display: flex;
   align-items: center;
