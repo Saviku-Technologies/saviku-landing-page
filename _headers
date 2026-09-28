@@ -7,5 +7,10 @@
 /assets/*
   Cache-Control: public, max-age=0, must-revalidate
 
+/assets/docs/saviku-compliance-clarification.pdf
+  Cache-Control: private, max-age=0, must-revalidate
+  Content-Disposition: attachment; filename="Saviku-Compliance-Clarification.pdf"
+  X-Robots-Tag: noindex, nofollow, noarchive
+
 /*.html
   Cache-Control: public, max-age=300
