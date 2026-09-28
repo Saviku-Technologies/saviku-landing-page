@@ -1,23 +1,23 @@
 {
   "stays_terms": {
-    "version": "v2",
-    "url": "/legal/stays-terms/v2.html",
-    "sha256": "0ab092721fa8b447e6101e6a99b56167a026100f91a8cb7c0053a9fd9ba3a628",
-    "effective_at": "2026-09-21T00:00:00Z",
+    "version": "v3",
+    "url": "/legal/stays-terms/v3.html",
+    "sha256": "9b1cf97ed57d8b3bd56ee8b2e47d3455699eea44561174550d32d4ebfa67851f",
+    "effective_at": "2026-09-28T00:00:00Z",
     "description": "Short stays booking terms and conditions"
   },
   "stays_refund_policy": {
-    "version": "v2",
-    "url": "/legal/stays-refund-policy/v2.html",
-    "sha256": "081f4904266ab791e068bde51f0a0c27d251013003f00e3bcf4081a8e9c4e887",
-    "effective_at": "2026-09-21T00:00:00Z",
+    "version": "v3",
+    "url": "/legal/stays-refund-policy/v3.html",
+    "sha256": "4be4867df780e1ef21c3fe58d1a83bcc3d37283fa94d9c58c329eea1ed8dfd5d",
+    "effective_at": "2026-09-28T00:00:00Z",
     "description": "Refund policy for short stays"
   },
   "platform_terms": {
-    "version": "v2",
-    "url": "/legal/terms/v2.html",
-    "sha256": "8e28f5e7eebc19f85c5b1ab36bad1412299575a0815d7282733d2383fda9ce48",
-    "effective_at": "2026-09-21T00:00:00Z",
+    "version": "v3",
+    "url": "/legal/terms/v3.html",
+    "sha256": "a308ebb4b189f46781af11e49e6ef1998ccb462df5dac7d2407eaf0a52971ff7",
+    "effective_at": "2026-09-28T00:00:00Z",
     "description": "Saviku platform terms and conditions"
   }
 }

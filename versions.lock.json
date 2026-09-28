@@ -1,10 +1,10 @@
 {
-  "locked_at": "2026-09-21T08:18:04.318901Z",
+  "locked_at": "2026-09-28T00:00:00Z",
   "purpose": "Prevent accidental edits to published versions. Edit only in source, then publish new version.",
   "locked_versions": [
     "stays_terms",
     "stays_refund_policy",
     "platform_terms"
   ],
-  "instruction": "To publish a new version, add v3 to manifest.json and commit versions.lock.json"
+  "instruction": "To publish a new version, add the new immutable files, update manifest.json and commit versions.lock.json"
 }

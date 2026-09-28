@@ -1,8 +1,8 @@
 # Versioned legal pages - always point to the current version
-/legal/stays-terms /legal/stays-terms/v2.html 200
-/legal/stays-refund-policy /legal/stays-refund-policy/v2.html 200
-/legal/terms /legal/terms/v2.html 200
-/legal/platform-terms /legal/terms/v2.html 200
+/legal/stays-terms /legal/stays-terms/v3.html 200
+/legal/stays-refund-policy /legal/stays-refund-policy/v3.html 200
+/legal/terms /legal/terms/v3.html 200
+/legal/platform-terms /legal/terms/v3.html 200
 
 # Legacy redirects
 /legal /legal/index.html 200
@@ -10,8 +10,10 @@
 /terms /terms.html 301
 /privacy /privacy.html 301
 /data-deletion /data-deletion.html 301
-/policy/platform/terms /legal/terms/v2.html 301
+/policy/platform/terms /legal/terms/v3.html 301
 /policy/stays_v1/terms /legal/stays-terms/v2.html 301
 /policy/stays_v1/refund_policy /legal/stays-refund-policy/v2.html 301
 /policy/stays_v2/terms /legal/stays-terms/v2.html 301
 /policy/stays_v2/refund_policy /legal/stays-refund-policy/v2.html 301
+/policy/stays_v3/terms /legal/stays-terms/v3.html 301
+/policy/stays_v3/refund_policy /legal/stays-refund-policy/v3.html 301
