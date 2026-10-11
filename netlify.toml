@@ -1,3 +1,8 @@
+# Linked Git repo: Saviku-Technologies/saviku-landing-page.
+# A push to main is the production deploy for https://saviku.co.
+# The check runs first so a failing site check does not publish.
+# GitHub Actions (.github/workflows/deploy.yml) repeats these commands
+# and does not deploy.
 [build]
-  command = "node scripts/stage-site.js"
+  command = "python3 scripts/check-site.py && node scripts/stage-site.js"
   publish = "dist"

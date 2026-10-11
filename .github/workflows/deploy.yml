@@ -1,0 +1,53 @@
+# Netlify's Git integration is the only publisher for https://saviku.co.
+# This workflow runs the same check and stage commands Netlify runs on main.
+# It does not call the Netlify CLI, so a push is not deployed twice.
+#
+# One Netlify site exists for this repo: "saviku"
+# (site id 53faec9c-681d-4c96-9d3f-5581285f7fa4). There is no staging site.
+# saviku.netlify.app, main.saviku.co and main--saviku.netlify.app are the
+# same production deploy, not a second environment.
+#
+# No GitHub Actions secrets are required. Do not add a netlify deploy step
+# while the repo stays linked in Netlify (Site configuration → Build & deploy).
+
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: landing-main
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Check and stage
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Check site
+        run: python3 scripts/check-site.py
+
+      - name: Stage site
+        run: node scripts/stage-site.js
+
+      - name: Confirm publish directory
+        run: |
+          test -s dist/index.html
+          test -s dist/_headers
+          test -s dist/_redirects
+          test -s dist/robots.txt
+          test -s dist/sitemap.xml
+          test -d dist/assets
+          test -d dist/legal
+          test ! -e dist/.git
+          test ! -e dist/scripts
+          test ! -e dist/brand

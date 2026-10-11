@@ -1,8 +1,9 @@
 # saviku.co
 
 Static marketing + legal site for Saviku. No dependencies — plain HTML, two CSS files and one
-small JS file. Netlify runs `node scripts/stage-site.js` to copy only public files into `dist/`,
-then publishes that directory with `_headers` and `_redirects`.
+small JS file. Netlify runs `python3 scripts/check-site.py && node scripts/stage-site.js`
+to check the site and copy only public files into `dist/`, then publishes that directory
+with `_headers` and `_redirects`.
 
 ## Run it locally
 
@@ -143,6 +144,23 @@ python3 scripts/build-raster.py   # regenerate og-cover.png and the app icons
 
 `check-site.py` exits non-zero on any error. Run it before deploying.
 
+## Deploy
+
+Production is the Netlify project `saviku` at https://saviku.co. The GitHub repo is
+already linked there, and a push to `main` is the deploy: Netlify runs the command
+in `netlify.toml` and publishes `dist/`. There is no second staging site.
+`saviku.netlify.app`, `main.saviku.co` and `main--saviku.netlify.app` serve that
+same production deploy.
+
+`.github/workflows/deploy.yml` runs on push to `main` and on manual dispatch. It
+repeats the check and the stage build so failures show up in GitHub Actions. It
+does not call the Netlify CLI, and it needs no secrets. Adding a CLI production
+deploy on top of the linked repo would publish the same commit twice.
+
+`scripts/stage-site.js` publishes only public HTML, `legal/`, `assets/`, `_headers`,
+`_redirects`, `robots.txt` and `sitemap.xml`. Git metadata, design sources and
+maintenance scripts stay out of `dist/`.
+
 ## Known follow-ups
 
 - Brand dark mode is v2 (handoff §4). Product surfaces stay light in v1 by
@@ -160,7 +178,3 @@ python3 scripts/build-raster.py   # regenerate og-cover.png and the app icons
 - Market shipped identity checks, not the planned T2/T3 property/field verification tiers.
 - Protected-hold claims apply to Saviku-paid bookings, not OTA-collected payments.
 - Asset filenames are stable, so browsers must revalidate them rather than cache them immutably.
-
-Production is the existing Netlify project `saviku` at https://saviku.co. Deploy only public
-HTML, `legal/`, `assets/`, `_headers`, `_redirects`, `robots.txt` and `sitemap.xml`; exclude Git
-metadata, design sources and maintenance scripts from the published directory.
