@@ -112,7 +112,10 @@ def main() -> int:
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
     manifest["platform_faq"] = {
         "version": version,
-        "url": f"/faq/{version}.json",
+        # Site-root path, same shape as the terms entries. stage-site.js
+        # strips the /legal prefix for the copy at /legal/manifest.json,
+        # which is the file the app joins onto public_legal_base_url.
+        "url": f"/legal/faq/{version}.json",
         "sha256": digest,
         "effective_at": doc.get("effective_at"),
         "description": "Saviku help and FAQ. The site and the WhatsApp bot both quote this document.",

@@ -14,8 +14,25 @@ for (const name of ["assets", "legal"]) {
 for (const name of ["_headers", "_redirects", "robots.txt", "sitemap.xml", "manifest.json", "faq.json"]) {
   fs.copyFileSync(path.join(root, name), path.join(output, name));
 }
-// The app reads https://saviku.co/legal/manifest.json (public_legal_base_url).
+// The app reads https://saviku.co/legal/manifest.json and joins each url onto
+// that directory. Repo urls are site-root paths (/legal/stays-terms/v3.html),
+// so the copy served under /legal drops that prefix (/stays-terms/v3.html,
+// /faq/v1.json). Leaving them unchanged would fetch /legal/legal/...
 fs.mkdirSync(path.join(output, "legal"), { recursive: true });
-fs.copyFileSync(path.join(root, "manifest.json"), path.join(output, "legal", "manifest.json"));
+const manifest = JSON.parse(fs.readFileSync(path.join(root, "manifest.json"), "utf8"));
+for (const [key, meta] of Object.entries(manifest)) {
+  if (!meta || typeof meta.url !== "string" || !meta.url.startsWith("/legal/")) {
+    throw new Error(`manifest url for ${key} must be a /legal/ path, got ${meta && meta.url}`);
+  }
+  meta.url = meta.url.slice("/legal".length);
+}
+const faq = manifest.platform_faq;
+if (!faq || !/^\/faq\/v\d+\.json$/.test(faq.url)) {
+  throw new Error(`platform_faq url must be /faq/vN.json on the legal manifest, got ${faq && faq.url}`);
+}
+fs.writeFileSync(
+  path.join(output, "legal", "manifest.json"),
+  JSON.stringify(manifest, null, 2) + "\n",
+);
 fs.copyFileSync(path.join(root, "faq.json"), path.join(output, "legal", "faq.json"));
 console.log("Static site packaged in dist/");

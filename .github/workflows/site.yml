@@ -1,0 +1,19 @@
+name: site
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  check:
+    name: FAQ pin and static site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generated FAQ matches data/faq.json
+        run: python3 scripts/build-faq.py --check
+      - name: Static site checks
+        run: python3 scripts/check-site.py
+      - name: Legal manifest URLs are relative to /legal
+        run: node scripts/stage-site.js
