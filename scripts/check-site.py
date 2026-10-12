@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import pathlib
 import re
+import subprocess
 import sys
 from html.parser import HTMLParser
 
@@ -136,6 +137,16 @@ for cls in sorted(css_classes - all_used):
     if cls.startswith(("is-", "no-", "has-", "band--", "button", "nav-links--")):
         continue
     warnings.append(f"css class .{cls} is defined but unused in markup")
+
+# ---- FAQ pin ----------------------------------------------------------------
+# data/faq.json is the only editable FAQ. The versioned file, the alias,
+# the manifest hash, and the homepage section are generated from it.
+faq_check = subprocess.run(
+    [sys.executable, str(ROOT / "scripts" / "build-faq.py"), "--check"],
+    cwd=ROOT,
+)
+if faq_check.returncode != 0:
+    errors.append("faq: data/faq.json drifted from the published faq.json / manifest / #faq")
 
 # ---- report ----------------------------------------------------------------
 print(f"checked {len(pages)} pages, {len(css_classes)} css classes, {len(defined_tokens)} tokens")

@@ -11,7 +11,11 @@ for (const name of fs.readdirSync(root).filter(name => name.endsWith(".html"))) 
 for (const name of ["assets", "legal"]) {
   fs.cpSync(path.join(root, name), path.join(output, name), { recursive: true });
 }
-for (const name of ["_headers", "_redirects", "robots.txt", "sitemap.xml"]) {
+for (const name of ["_headers", "_redirects", "robots.txt", "sitemap.xml", "manifest.json", "faq.json"]) {
   fs.copyFileSync(path.join(root, name), path.join(output, name));
 }
+// The app reads https://saviku.co/legal/manifest.json (public_legal_base_url).
+fs.mkdirSync(path.join(output, "legal"), { recursive: true });
+fs.copyFileSync(path.join(root, "manifest.json"), path.join(output, "legal", "manifest.json"));
+fs.copyFileSync(path.join(root, "faq.json"), path.join(output, "legal", "faq.json"));
 console.log("Static site packaged in dist/");

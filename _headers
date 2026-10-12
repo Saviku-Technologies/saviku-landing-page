@@ -14,3 +14,20 @@
 
 /*.html
   Cache-Control: public, max-age=300
+
+# The versioned FAQ document is immutable. A text change publishes a new version.
+/legal/faq/v*.json
+  Cache-Control: public, max-age=31536000, immutable
+
+# The current alias and the manifest move when a new version is published.
+/faq.json
+  Cache-Control: public, max-age=60, must-revalidate
+
+/manifest.json
+  Cache-Control: public, max-age=60, must-revalidate
+
+/legal/manifest.json
+  Cache-Control: public, max-age=60, must-revalidate
+
+/legal/faq.json
+  Cache-Control: public, max-age=60, must-revalidate

@@ -1,0 +1,281 @@
+{
+  "version": "v1",
+  "effective_at": "2026-10-12T00:00:00Z",
+  "entries": [
+    {
+      "key": "what_saviku_is",
+      "status": "reviewed",
+      "examples": [
+        "is saviku a property management system or a chatbot",
+        "is saviku a pms or a chatbot"
+      ],
+      "title": {
+        "en": "Is Saviku a property management system, or a chatbot?",
+        "sw_ke": "Je, Saviku ni mfumo wa kusimamia mali, au chatbot?",
+        "sw_tz": "Je, Saviku ni mfumo wa kusimamia mali, au chatbot?"
+      },
+      "answer": {
+        "en": "Both. Properties, availability, rates, restrictions and reservations all live in one PMS record per property, checked every minute and synced out to your connected channels. The 24/7 AI co-host is the WhatsApp conversation layered on top of it — not a separate product."
+      }
+    },
+    {
+      "key": "no_install",
+      "status": "reviewed",
+      "examples": [
+        "do i need to install anything",
+        "do i need to download an app"
+      ],
+      "title": {
+        "en": "Do I need to install anything?",
+        "sw_ke": "Je, nahitaji kusakinisha kitu?",
+        "sw_tz": "Je, nahitaji kusakinisha kitu?"
+      },
+      "answer": {
+        "en": "No. Saviku runs inside WhatsApp on the number you already use. A web page opens only for the few things a bigger screen does better — a document photo, a signature, a date grid — and it takes you straight back to the chat."
+      }
+    },
+    {
+      "key": "is_a_bot_answering",
+      "status": "reviewed",
+      "examples": [
+        "is a bot answering me",
+        "is savi a bot"
+      ],
+      "title": {
+        "en": "Is a bot answering me?",
+        "sw_ke": "Je, bot ndiyo inanijibu?",
+        "sw_tz": "Je, bot ndiyo inanijibu?"
+      },
+      "answer": {
+        "en": "Savi is hybrid: deterministic automation handles structured actions and keeps every money or identity step on fixed, auditable paths; AI helps understand eligible free-text requests and route them to approved actions; and a human concierge steps in when context or judgement is needed. AI never invents payment, identity or release instructions."
+      }
+    },
+    {
+      "key": "channels",
+      "status": "reviewed",
+      "examples": [
+        "which channels can i connect",
+        "can i connect airbnb"
+      ],
+      "title": {
+        "en": "Which channels can I connect?",
+        "sw_ke": "Ni njia zipi naweza kuunganisha?",
+        "sw_tz": "Ni njia zipi naweza kuunganisha?"
+      },
+      "answer": {
+        "en": "Airbnb, Booking.com, Expedia and Vrbo connect through realtime two-way channel sync. Reservations flow into Saviku, and the availability, rates and restrictions (ARI) you set from WhatsApp flow back out — checked every minute, not on a scheduled calendar refresh."
+      }
+    },
+    {
+      "key": "double_book",
+      "status": "reviewed",
+      "examples": [
+        "can two channels double-book the same night",
+        "can two channels book the same night"
+      ],
+      "title": {
+        "en": "Can two channels double-book the same night?",
+        "sw_ke": "Je, njia mbili zinaweza kuhifadhi usiku mmoja mara mbili?",
+        "sw_tz": "Je, njia mbili zinaweza kuhifadhi usiku mmoja mara mbili?"
+      },
+      "answer": {
+        "en": "Saviku checks new bookings against dates already reserved and sends availability updates to connected channels. Separate channels can still accept bookings before an update arrives, so simultaneous bookings or sync delays can cause conflicts. Saviku flags conflicting incoming bookings for review; channel updates are not an instant guarantee."
+      }
+    },
+    {
+      "key": "how_protection_works",
+      "status": "reviewed",
+      "examples": [
+        "how does saviku protect my money",
+        "is my money safe",
+        "how does escrow work",
+        "what is a protected booking",
+        "pesa zangu ziko salama",
+        "saviku inalindaje pesa yangu",
+        "how does the 48-hour booking protection work"
+      ],
+      "title": {
+        "en": "How does the 48-Hour Booking Protection work?",
+        "sw_ke": "Jinsi Saviku inavyolinda malipo yako",
+        "sw_tz": "Jinsi Saviku inavyolinda malipo yako"
+      },
+      "answer": {
+        "en": "Secure Booking: Your payment is processed through Saviku’s payment provider, allocated to your booking and not paid directly to the host at collection.\n\nProtection Window: You have 48 hours after scheduled check-in to cancel or report a material problem.\n\nHost Payout: If no eligible cancellation or dispute is open, Saviku instructs the provider to pay the verified host after that window, subject to provider availability.\n\nGuest Guarantee: If any critical listing or access issues occur, you are covered under Saviku’s booking protection policy."
+      }
+    },
+    {
+      "key": "host_payout",
+      "status": "reviewed",
+      "examples": [
+        "when does the host get paid",
+        "when do hosts get paid",
+        "when do hosts receive their payout"
+      ],
+      "title": {
+        "en": "When do hosts receive their payout?",
+        "sw_ke": "Wenyeji hupokea malipo lini?",
+        "sw_tz": "Wenyeji hupokea malipo lini?"
+      },
+      "answer": {
+        "en": "Predictable 48-Hour Payouts\n\nHost payout is scheduled to your registered M-PESA or approved account 48 hours after scheduled check-in, minus Saviku's disclosed service fee, unless an eligible cancellation or dispute is open."
+      }
+    },
+    {
+      "key": "agents",
+      "status": "reviewed",
+      "examples": [
+        "can agents and property managers use it",
+        "can property managers use saviku"
+      ],
+      "title": {
+        "en": "Can agents and property managers use it?",
+        "sw_ke": "Je, mawakala na wasimamizi wa mali wanaweza kuitumia?",
+        "sw_tz": "Je, mawakala na wasimamizi wa mali wanaweza kuitumia?"
+      },
+      "answer": {
+        "en": "Yes. Agents follow the same verification ladder plus referee confirmations, and get a shareable profile that shows bookings completed through Saviku’s booking-protection flow and any diversion reports — nothing self-declared."
+      }
+    },
+    {
+      "key": "refunds",
+      "status": "reviewed",
+      "examples": [
+        "how do refunds work",
+        "can i get a refund",
+        "can i get my money back after check-in",
+        "what is the refund policy",
+        "nitarudishiwa pesa",
+        "sera ya kurudishiwa pesa"
+      ],
+      "title": {
+        "en": "Refunds and cancellations",
+        "sw_ke": "Kurudishiwa pesa na kughairi",
+        "sw_tz": "Kurudishiwa pesa na kughairi"
+      },
+      "answer": {
+        "en": "If you cancel before paying, nothing is charged. While your payment is still held, an eligible cancellation or an upheld dispute can lead to a full or partial refund, decided under the Saviku refund policy. Refunds go back to the number that paid. Once the host has been paid, refunds follow the host's terms and Saviku cannot refund or recover that payment. Your booking card links the full policy."
+      }
+    },
+    {
+      "key": "place_not_as_advertised",
+      "status": "reviewed",
+      "examples": [
+        "what if the place isn't as advertised",
+        "what if the place is not as described",
+        "the listing was different from the place"
+      ],
+      "title": {
+        "en": "If the place is not as advertised",
+        "sw_ke": "Kama mahali si kama ilivyotangazwa",
+        "sw_tz": "Kama mahali si kama ilivyotangazwa"
+      },
+      "answer": {
+        "en": "If the place is not what the listing promised — the photos, the location, or an amenity that is missing — raise it from your booking while Saviku is still holding the payment. A Saviku reviewer decides under the stays terms. A validated claim can be a full refund, including the protection fee. Once the host has been paid, that payment is no longer in the hold. Cancel my stay on your booking card is what starts this."
+      }
+    },
+    {
+      "key": "fees",
+      "status": "reviewed",
+      "examples": [
+        "what are the saviku fees",
+        "how much does saviku charge",
+        "what is the service fee",
+        "ada ya saviku ni kiasi gani",
+        "saviku inatoza kiasi gani"
+      ],
+      "title": {
+        "en": "Saviku fees",
+        "sw_ke": "Ada za Saviku",
+        "sw_tz": "Ada za Saviku"
+      },
+      "answer": {
+        "en": "Saviku charges a small protection fee on protected stays, shared between the guest and the host. Your booking card shows the exact amount before you pay, so there are no surprises.",
+        "sw_ke": "Saviku inatoza ada ndogo ya ulinzi kwa booking zilizolindwa, inayogawanywa kati ya mgeni na mwenyeji. Kadi ya booking yako inaonyesha kiasi kamili kabla ya kulipa, kwa hivyo hakuna mshangao.",
+        "sw_tz": "Saviku inatoza ada ndogo ya ulinzi kwa uhifadhi uliolindwa, inayogawanywa kati ya mgeni na mwenyeji. Kadi ya uhifadhi wako inaonyesha kiasi kamili kabla ya kulipa, kwa hivyo hakuna mshangao."
+      }
+    },
+    {
+      "key": "how_to_pay",
+      "status": "reviewed",
+      "examples": [
+        "how do i pay",
+        "can i pay with mpesa",
+        "what payment methods do you accept",
+        "nalipaje",
+        "naweza kulipa kwa mpesa"
+      ],
+      "title": {
+        "en": "How to pay",
+        "sw_ke": "Jinsi ya kulipa",
+        "sw_tz": "Jinsi ya kulipa"
+      },
+      "answer": {
+        "en": "You pay with M-Pesa. Open your booking card, tap pay, and approve the M-Pesa prompt that appears on your phone. Your booking is confirmed once the payment goes through.",
+        "sw_ke": "Unalipa kwa M-Pesa. Fungua kadi ya booking yako, bonyeza lipa, kisha ukubali ombi la M-Pesa litakalotokea kwenye simu yako. Booking yako inathibitishwa malipo yakifaulu.",
+        "sw_tz": "Unalipa kwa M-Pesa. Fungua kadi ya uhifadhi wako, bonyeza lipa, kisha ukubali ombi la M-Pesa litakalotokea kwenye simu yako. Uhifadhi wako unathibitishwa malipo yakifanikiwa."
+      }
+    },
+    {
+      "key": "payment_not_working",
+      "status": "reviewed",
+      "examples": [
+        "my mpesa prompt did not come",
+        "payment failed",
+        "i was charged but no booking",
+        "ombi la mpesa halikuja",
+        "malipo yameshindwa"
+      ],
+      "title": {
+        "en": "M-Pesa prompt did not come or payment failed",
+        "sw_ke": "Ombi la M-Pesa halikuja au malipo yameshindwa",
+        "sw_tz": "Ombi la M-Pesa halikuja au malipo yameshindwa"
+      },
+      "answer": {
+        "en": "Check that the number you are paying with is the one on your M-Pesa, that it has enough balance, and that your phone has signal, then try again from your booking card. If money left your account but your booking is not confirmed, contact Savi support and have your M-Pesa message ready.",
+        "sw_ke": "Hakikisha namba unayolipia ndiyo ya M-Pesa yako, ina salio la kutosha, na simu ina mtandao, kisha jaribu tena kutoka kwa kadi ya booking yako. Kama pesa zimetoka lakini booking haijathibitishwa, wasiliana na msaada wa Savi ukiwa na ujumbe wako wa M-Pesa.",
+        "sw_tz": "Hakikisha namba unayolipia ndiyo ya M-Pesa yako, ina salio la kutosha, na simu ina mtandao, kisha jaribu tena kutoka kwenye kadi ya uhifadhi wako. Kama pesa zimetoka lakini uhifadhi haujathibitishwa, wasiliana na msaada wa Savi ukiwa na ujumbe wako wa M-Pesa."
+      }
+    },
+    {
+      "key": "host_verification",
+      "status": "reviewed",
+      "examples": [
+        "how do i get verified",
+        "how do i verify my id",
+        "why do i need to verify",
+        "nathibitishwaje",
+        "kuthibitishwa kunahusu nini"
+      ],
+      "title": {
+        "en": "Getting verified",
+        "sw_ke": "Kuthibitishwa",
+        "sw_tz": "Kuthibitishwa"
+      },
+      "answer": {
+        "en": "Hosts verify so they can receive payouts. Tap Get verified in the main menu, agree to the privacy notice, send your ID and a selfie, and add your M-Pesa payout number. It takes about two minutes.",
+        "sw_ke": "Wenyeji wanathibitishwa ili wapokee malipo. Bonyeza Get verified kwenye menyu kuu, kubali notisi ya faragha, tuma kitambulisho chako na selfie, kisha ongeza namba yako ya M-Pesa ya malipo. Inachukua takriban dakika mbili.",
+        "sw_tz": "Wenyeji wanathibitishwa ili wapokee malipo. Bonyeza Get verified kwenye menyu kuu, kubali notisi ya faragha, tuma kitambulisho chako na selfie, kisha ongeza namba yako ya M-Pesa ya malipo. Inachukua takriban dakika mbili."
+      }
+    },
+    {
+      "key": "contact_support",
+      "status": "reviewed",
+      "examples": [
+        "how do i contact saviku support",
+        "talk to saviku support",
+        "i need help from saviku",
+        "nawezaje kuwasiliana na saviku"
+      ],
+      "title": {
+        "en": "Contacting Savi support",
+        "sw_ke": "Kuwasiliana na msaada wa Savi",
+        "sw_tz": "Kuwasiliana na msaada wa Savi"
+      },
+      "answer": {
+        "en": "Type /support to report a problem, check a ticket, or reach a Saviku rep. They reply right here in WhatsApp.",
+        "sw_ke": "Andika /support kuripoti tatizo, kuangalia tiketi, au kuwasiliana na mhudumu wa Saviku. Wanajibu hapa hapa WhatsApp.",
+        "sw_tz": "Andika /support kuripoti tatizo, kuangalia tiketi, au kuwasiliana na mhudumu wa Saviku. Wanajibu hapa hapa WhatsApp."
+      }
+    }
+  ]
+}
