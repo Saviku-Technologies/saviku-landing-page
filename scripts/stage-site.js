@@ -18,6 +18,8 @@ for (const name of ["_headers", "_redirects", "robots.txt", "sitemap.xml", "mani
 // that directory. Repo urls are site-root paths (/legal/stays-terms/v3.html),
 // so the copy served under /legal drops that prefix (/stays-terms/v3.html,
 // /faq/v1.json). Leaving them unchanged would fetch /legal/legal/...
+// The root /manifest.json keeps the /legal prefix on purpose; only the app's
+// /legal/manifest.json copy is stripped, so read that one, not the root copy.
 fs.mkdirSync(path.join(output, "legal"), { recursive: true });
 const manifest = JSON.parse(fs.readFileSync(path.join(root, "manifest.json"), "utf8"));
 for (const [key, meta] of Object.entries(manifest)) {
