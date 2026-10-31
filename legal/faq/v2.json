@@ -1,0 +1,602 @@
+{
+  "version": "v2",
+  "effective_at": "2026-11-01T00:00:00Z",
+  "entries": [
+    {
+      "key": "multi_platform_already_connected",
+      "category": "hosts",
+      "status": "reviewed",
+      "examples": [
+        "my place is on Airbnb can I add my TikTok",
+        "can I add a TikTok link for a place already connected",
+        "do I need to list my place again from TikTok",
+        "how do I use TikTok with my Airbnb listing",
+        "I pasted a link for a place I already added"
+      ],
+      "title": {
+        "en": "Adding TikTok or a link to a place that is already connected"
+      },
+      "answer": {
+        "en": "If your place is already connected to a booking platform through Saviku, do not add it again from a TikTok post or another link. Saviku keeps one unit and does not import the link. Share your booking card on TikTok instead, by posting the card image and adding its link to your bio. If your card is not ready, Savi shows you how to finish it. A link from another platform that Saviku can connect means you can add that platform to the same unit. A link from a site Saviku cannot sync is not imported, so block those dates by hand. If you would rather stop using the platform, you can disconnect it and switch to Saviku Direct. Your booking card stays active, and you should hide the platform listing or block its dates to avoid a double booking."
+      }
+    },
+    {
+      "key": "multi_platform_second_ota",
+      "category": "hosts",
+      "status": "reviewed",
+      "examples": [
+        "can I connect Airbnb and Booking.com for the same place",
+        "my place is on two platforms",
+        "how do I add Booking.com to my Airbnb unit",
+        "will I get double bookings on two platforms",
+        "does a second platform count as a new unit"
+      ],
+      "title": {
+        "en": "The same place on more than one platform"
+      },
+      "answer": {
+        "en": "Connect each platform to the same unit. You keep one booking card and one calendar, and the place counts once. A booking on any platform closes those dates on the others, usually within a minute or two. Each platform keeps its own price, and connecting does not change it, though seasonal prices on some platforms may need checking afterwards. Your stay rules apply everywhere. Remove any iCal calendar links between your platforms first, because they overwrite synced dates. Bookings made on a platform are paid through that platform. Bookings made on your booking card are paid through Saviku and stay in a protected hold until payout."
+      }
+    },
+    {
+      "key": "multi_platform_add_ota_later",
+      "category": "hosts",
+      "status": "reviewed",
+      "examples": [
+        "I started with TikTok how do I connect Airbnb",
+        "can I connect Airbnb to my TikTok listing",
+        "will connecting Airbnb change my booking card",
+        "I listed from a link and now want to use Booking.com",
+        "does connecting a platform create a new listing"
+      ],
+      "title": {
+        "en": "Connecting a platform to a place you added from TikTok or a link"
+      },
+      "answer": {
+        "en": "Choose Connect a platform in My Property and pick your place. Saviku links the platform to your existing unit and does not create a new one. Your booking card, its link and your TikTok posts stay the same, and the place still counts once. Your dates and bookings are kept, and any dates already booked in Saviku close on the new platform. Your platform price and your booking card price stay separate. Your card stays open for bookings while you connect."
+      }
+    },
+    {
+      "key": "direct_price_separate",
+      "category": "hosts",
+      "status": "reviewed",
+      "examples": [
+        "can I charge less on my booking card than on Airbnb",
+        "will my booking card price change my Airbnb price",
+        "how do I change my price on Booking.com",
+        "why is my platform price different from my card"
+      ],
+      "title": {
+        "en": "Your booking card price and your platform prices"
+      },
+      "answer": {
+        "en": "Your booking card price is separate from your platform prices. Direct bookings avoid platform fees, so you can set a lower price on your card. Changing your card price never changes a platform price. To change a platform price, open Pricing, choose Platform prices, and confirm the change for that platform. Your availability is always shared, so a booked night closes everywhere."
+      }
+    },
+    {
+      "key": "booking_requests_mode",
+      "category": "hosts",
+      "status": "reviewed",
+      "examples": [
+        "can I approve every booking",
+        "how do I confirm bookings myself",
+        "accept bookings automatically",
+        "why did I get a booking to approve"
+      ],
+      "title": {
+        "en": "Accepting bookings from the calendar or confirming each one"
+      },
+      "answer": {
+        "en": "In your booking card settings you can accept based on calendar, which is the default, or send all booking requests for confirmation. If a platform connection has a system error, Saviku sends you every request to approve until it is fixed, and then returns to your setting."
+      }
+    },
+    {
+      "key": "unit_activation",
+      "category": "hosts",
+      "status": "reviewed",
+      "examples": [
+        "how do I activate my unit",
+        "why is my booking card not active",
+        "do I need a photo to list my place",
+        "how does my listing get verified"
+      ],
+      "title": {
+        "en": "Activating your unit"
+      },
+      "answer": {
+        "en": "You do not need a photo to start taking bookings. Your booking card goes live once your listing is saved, your ID is verified and your booking terms are set. A listing on a connected platform also needs that connection to finish. Every booking card shows Protected, because every payment through Saviku is protected. If you created your listing from scratch on Saviku, you can choose to take a photo inside the place with location on before your first guest books, which earns Listing Verified. Your listing earns Saviku Direct after its first stay paid through Saviku."
+      }
+    },
+    {
+      "key": "channels",
+      "category": "hosts",
+      "status": "reviewed",
+      "examples": [
+        "which channels can i connect",
+        "can i connect airbnb"
+      ],
+      "title": {
+        "en": "Which channels can I connect?",
+        "sw_ke": "Ni njia zipi naweza kuunganisha?",
+        "sw_tz": "Ni njia zipi naweza kuunganisha?"
+      },
+      "answer": {
+        "en": "Saviku connects to Airbnb, Booking.com, Expedia, Vrbo and many other booking platforms through realtime two-way channel sync. Reservations flow into Saviku, and the availability, rates and restrictions (ARI) you set from WhatsApp flow back out — checked every minute, not on a scheduled calendar refresh."
+      }
+    },
+    {
+      "key": "host_payout",
+      "category": "hosts",
+      "status": "reviewed",
+      "examples": [
+        "when does the host get paid",
+        "when do hosts get paid",
+        "when do hosts receive their payout"
+      ],
+      "title": {
+        "en": "When do hosts receive their payout?",
+        "sw_ke": "Wenyeji hupokea malipo lini?",
+        "sw_tz": "Wenyeji hupokea malipo lini?"
+      },
+      "answer": {
+        "en": "Predictable 48-Hour Payouts\n\nHost payout is scheduled to your registered M-PESA or approved account 48 hours after scheduled check-in, minus Saviku's disclosed service fee, unless an eligible cancellation or dispute is open."
+      }
+    },
+    {
+      "key": "host_verification",
+      "category": "hosts",
+      "status": "reviewed",
+      "examples": [
+        "how do i get verified",
+        "how do i verify my id",
+        "why do i need to verify",
+        "nathibitishwaje",
+        "kuthibitishwa kunahusu nini"
+      ],
+      "title": {
+        "en": "Getting verified",
+        "sw_ke": "Kuthibitishwa",
+        "sw_tz": "Kuthibitishwa"
+      },
+      "answer": {
+        "en": "Hosts verify so they can receive payouts. Tap Get verified in the main menu, agree to the privacy notice, send your ID and a selfie, and add your M-Pesa payout number. It takes about two minutes.",
+        "sw_ke": "Wenyeji wanathibitishwa ili wapokee malipo. Bonyeza Get verified kwenye menyu kuu, kubali notisi ya faragha, tuma kitambulisho chako na selfie, kisha ongeza namba yako ya M-Pesa ya malipo. Inachukua takriban dakika mbili.",
+        "sw_tz": "Wenyeji wanathibitishwa ili wapokee malipo. Bonyeza Get verified kwenye menyu kuu, kubali notisi ya faragha, tuma kitambulisho chako na selfie, kisha ongeza namba yako ya M-Pesa ya malipo. Inachukua takriban dakika mbili."
+      }
+    },
+    {
+      "key": "host_fees",
+      "category": "hosts",
+      "status": "reviewed",
+      "examples": [
+        "what are your fees",
+        "what is your commission",
+        "how much do you charge hosts"
+      ],
+      "title": {
+        "en": "Host fees and commission",
+        "sw_ke": "Ada na kamisheni ya mwenyeji",
+        "sw_tz": "Ada na kamisheni ya mwenyeji"
+      },
+      "answer": {
+        "en": "Saviku deducts a disclosed service fee from the host payout. The rate is a percentage (%) commission, shown before you publish, and the booking card shows the charge. There is no separate host subscription fee."
+      }
+    },
+    {
+      "key": "host_cancellation",
+      "category": "hosts",
+      "status": "reviewed",
+      "examples": [
+        "what is the cancellation policy",
+        "what happens when a guest cancels",
+        "host cancellation policy"
+      ],
+      "title": {
+        "en": "Cancellation policy for hosts",
+        "sw_ke": "Sera ya kughairi kwa wenyeji",
+        "sw_tz": "Sera ya kughairi kwa wenyeji"
+      },
+      "answer": {
+        "en": "If a guest cancels before paying, the booking is not charged and your payout does not change. While Saviku still holds the payment, an eligible guest cancellation or an upheld dispute can reduce or stop that payout. After the payout has been sent to your M-Pesa, it is not taken back from here. If you cancel a confirmed stay, the guest is refunded from the amount still held and that payout does not go out."
+      }
+    },
+    {
+      "key": "guest_payments",
+      "category": "hosts",
+      "status": "reviewed",
+      "examples": [
+        "can guests pay with a credit card",
+        "can guests pay by card",
+        "how do guests pay",
+        "what payment methods can guests use"
+      ],
+      "title": {
+        "en": "How guests pay",
+        "sw_ke": "Wageni wanalipa vipi",
+        "sw_tz": "Wageni wanalipa vipi"
+      },
+      "answer": {
+        "en": "Guests pay with M-Pesa or by card. The guest opens their booking card and pays from there."
+      }
+    },
+    {
+      "key": "refunds",
+      "category": "guests",
+      "status": "reviewed",
+      "examples": [
+        "how do refunds work",
+        "can i get a refund",
+        "can i get my money back after check-in",
+        "what is the refund policy",
+        "nitarudishiwa pesa",
+        "sera ya kurudishiwa pesa"
+      ],
+      "title": {
+        "en": "Refunds and cancellations",
+        "sw_ke": "Kurudishiwa pesa na kughairi",
+        "sw_tz": "Kurudishiwa pesa na kughairi"
+      },
+      "answer": {
+        "en": "If you cancel before paying, nothing is charged. While your payment is still held, an eligible cancellation or an upheld dispute can lead to a full or partial refund, decided under the Saviku refund policy. Refunds go back to the number that paid. Once the host has been paid, refunds follow the host's terms and Saviku cannot refund or recover that payment. Your booking card links the full policy."
+      }
+    },
+    {
+      "key": "place_not_as_advertised",
+      "category": "guests",
+      "status": "reviewed",
+      "examples": [
+        "what if the place isn't as advertised",
+        "what if the place is not as described",
+        "the listing was different from the place"
+      ],
+      "title": {
+        "en": "If the place is not as advertised",
+        "sw_ke": "Kama mahali si kama ilivyotangazwa",
+        "sw_tz": "Kama mahali si kama ilivyotangazwa"
+      },
+      "answer": {
+        "en": "If the place is not what the listing promised — the photos, the location, or an amenity that is missing — raise it from your booking while Saviku is still holding the payment. A Saviku reviewer decides under the stays terms. A validated claim can be a full refund, including the protection fee. Once the host has been paid, that payment is no longer in the hold. Cancel my stay on your booking card is what starts this."
+      }
+    },
+    {
+      "key": "how_to_pay",
+      "category": "guests",
+      "status": "reviewed",
+      "examples": [
+        "how do i pay",
+        "can i pay with mpesa",
+        "what payment methods do you accept",
+        "nalipaje",
+        "naweza kulipa kwa mpesa"
+      ],
+      "title": {
+        "en": "How to pay",
+        "sw_ke": "Jinsi ya kulipa",
+        "sw_tz": "Jinsi ya kulipa"
+      },
+      "answer": {
+        "en": "You pay with M-Pesa or by card. Open your booking card, tap pay, and approve the M-Pesa prompt that appears on your phone. Your booking is confirmed once the payment goes through.",
+        "sw_ke": "Unalipa kwa M-Pesa. Fungua kadi ya booking yako, bonyeza lipa, kisha ukubali ombi la M-Pesa litakalotokea kwenye simu yako. Booking yako inathibitishwa malipo yakifaulu.",
+        "sw_tz": "Unalipa kwa M-Pesa. Fungua kadi ya uhifadhi wako, bonyeza lipa, kisha ukubali ombi la M-Pesa litakalotokea kwenye simu yako. Uhifadhi wako unathibitishwa malipo yakifanikiwa."
+      }
+    },
+    {
+      "key": "payment_not_working",
+      "category": "guests",
+      "status": "reviewed",
+      "examples": [
+        "my mpesa prompt did not come",
+        "payment failed",
+        "i was charged but no booking",
+        "ombi la mpesa halikuja",
+        "malipo yameshindwa"
+      ],
+      "title": {
+        "en": "M-Pesa prompt did not come or payment failed",
+        "sw_ke": "Ombi la M-Pesa halikuja au malipo yameshindwa",
+        "sw_tz": "Ombi la M-Pesa halikuja au malipo yameshindwa"
+      },
+      "answer": {
+        "en": "Check that the number you are paying with is the one on your M-Pesa, that it has enough balance, and that your phone has signal, then try again from your booking card. If money left your account but your booking is not confirmed, contact Savi support and have your M-Pesa message ready.",
+        "sw_ke": "Hakikisha namba unayolipia ndiyo ya M-Pesa yako, ina salio la kutosha, na simu ina mtandao, kisha jaribu tena kutoka kwa kadi ya booking yako. Kama pesa zimetoka lakini booking haijathibitishwa, wasiliana na msaada wa Savi ukiwa na ujumbe wako wa M-Pesa.",
+        "sw_tz": "Hakikisha namba unayolipia ndiyo ya M-Pesa yako, ina salio la kutosha, na simu ina mtandao, kisha jaribu tena kutoka kwenye kadi ya uhifadhi wako. Kama pesa zimetoka lakini uhifadhi haujathibitishwa, wasiliana na msaada wa Savi ukiwa na ujumbe wako wa M-Pesa."
+      }
+    },
+    {
+      "key": "what_saviku_is",
+      "category": "general",
+      "status": "reviewed",
+      "examples": [
+        "is saviku a property management system or a chatbot",
+        "is saviku a pms or a chatbot"
+      ],
+      "title": {
+        "en": "Is Saviku a property management system, or a chatbot?",
+        "sw_ke": "Je, Saviku ni mfumo wa kusimamia mali, au chatbot?",
+        "sw_tz": "Je, Saviku ni mfumo wa kusimamia mali, au chatbot?"
+      },
+      "answer": {
+        "en": "Both. Properties, availability, rates, restrictions and reservations all live in one PMS record per property, checked every minute and synced out to your connected channels. The 24/7 AI co-host is the WhatsApp conversation layered on top of it — not a separate product."
+      }
+    },
+    {
+      "key": "no_install",
+      "category": "general",
+      "status": "reviewed",
+      "examples": [
+        "do i need to install anything",
+        "do i need to download an app"
+      ],
+      "title": {
+        "en": "Do I need to install anything?",
+        "sw_ke": "Je, nahitaji kusakinisha kitu?",
+        "sw_tz": "Je, nahitaji kusakinisha kitu?"
+      },
+      "answer": {
+        "en": "No. Saviku runs inside WhatsApp on the number you already use. A web page opens only for the few things a bigger screen does better — a document photo, a signature, a date grid — and it takes you straight back to the chat."
+      }
+    },
+    {
+      "key": "is_a_bot_answering",
+      "category": "general",
+      "status": "reviewed",
+      "examples": [
+        "is a bot answering me",
+        "is savi a bot"
+      ],
+      "title": {
+        "en": "Is a bot answering me?",
+        "sw_ke": "Je, bot ndiyo inanijibu?",
+        "sw_tz": "Je, bot ndiyo inanijibu?"
+      },
+      "answer": {
+        "en": "Savi is hybrid: deterministic automation handles structured actions and keeps every money or identity step on fixed, auditable paths; AI helps understand eligible free-text requests and route them to approved actions; and a human concierge steps in when context or judgement is needed. AI never invents payment, identity or release instructions."
+      }
+    },
+    {
+      "key": "double_book",
+      "category": "general",
+      "status": "reviewed",
+      "examples": [
+        "can two channels double-book the same night",
+        "can two channels book the same night"
+      ],
+      "title": {
+        "en": "Can two channels double-book the same night?",
+        "sw_ke": "Je, njia mbili zinaweza kuhifadhi usiku mmoja mara mbili?",
+        "sw_tz": "Je, njia mbili zinaweza kuhifadhi usiku mmoja mara mbili?"
+      },
+      "answer": {
+        "en": "Saviku checks new bookings against dates already reserved and sends availability updates to connected channels. Separate channels can still accept bookings before an update arrives, so simultaneous bookings or sync delays can cause conflicts. Saviku flags conflicting incoming bookings for review; channel updates are not an instant guarantee."
+      }
+    },
+    {
+      "key": "agents",
+      "category": "general",
+      "status": "reviewed",
+      "examples": [
+        "can agents and property managers use it",
+        "can property managers use saviku"
+      ],
+      "title": {
+        "en": "Can agents and property managers use it?",
+        "sw_ke": "Je, mawakala na wasimamizi wa mali wanaweza kuitumia?",
+        "sw_tz": "Je, mawakala na wasimamizi wa mali wanaweza kuitumia?"
+      },
+      "answer": {
+        "en": "Yes. Agents follow the same verification ladder plus referee confirmations, and get a shareable profile that shows bookings completed through Saviku’s booking-protection flow and any diversion reports — nothing self-declared."
+      }
+    },
+    {
+      "key": "fees",
+      "category": "general",
+      "status": "reviewed",
+      "examples": [
+        "what are the saviku fees",
+        "how much does saviku charge",
+        "what is the service fee",
+        "ada ya saviku ni kiasi gani",
+        "saviku inatoza kiasi gani"
+      ],
+      "title": {
+        "en": "Saviku fees",
+        "sw_ke": "Ada za Saviku",
+        "sw_tz": "Ada za Saviku"
+      },
+      "answer": {
+        "en": "Saviku charges a small protection fee on protected stays, shared between the guest and the host. Your booking card shows the exact amount before you pay, so there are no surprises.",
+        "sw_ke": "Saviku inatoza ada ndogo ya ulinzi kwa booking zilizolindwa, inayogawanywa kati ya mgeni na mwenyeji. Kadi ya booking yako inaonyesha kiasi kamili kabla ya kulipa, kwa hivyo hakuna mshangao.",
+        "sw_tz": "Saviku inatoza ada ndogo ya ulinzi kwa uhifadhi uliolindwa, inayogawanywa kati ya mgeni na mwenyeji. Kadi ya uhifadhi wako inaonyesha kiasi kamili kabla ya kulipa, kwa hivyo hakuna mshangao."
+      }
+    },
+    {
+      "key": "contact_support",
+      "category": "general",
+      "status": "reviewed",
+      "examples": [
+        "how do i contact saviku support",
+        "talk to saviku support",
+        "i need help from saviku",
+        "nawezaje kuwasiliana na saviku"
+      ],
+      "title": {
+        "en": "Contacting Savi support",
+        "sw_ke": "Kuwasiliana na msaada wa Savi",
+        "sw_tz": "Kuwasiliana na msaada wa Savi"
+      },
+      "answer": {
+        "en": "Type /support to report a problem, check a ticket, or reach a Saviku rep. They reply right here in WhatsApp.",
+        "sw_ke": "Andika /support kuripoti tatizo, kuangalia tiketi, au kuwasiliana na mhudumu wa Saviku. Wanajibu hapa hapa WhatsApp.",
+        "sw_tz": "Andika /support kuripoti tatizo, kuangalia tiketi, au kuwasiliana na mhudumu wa Saviku. Wanajibu hapa hapa WhatsApp."
+      }
+    },
+    {
+      "key": "supported_countries",
+      "category": "general",
+      "status": "reviewed",
+      "examples": [
+        "can I list a property in Rwanda",
+        "can I list a property in Rwanda on Saviku",
+        "which countries can I list in",
+        "can I list outside Kenya",
+        "do you support listings in Rwanda",
+        "do you operate in Uganda",
+        "do you operate in Rwanda"
+      ],
+      "title": {
+        "en": "Where Saviku operates",
+        "sw_ke": "Saviku inafanya kazi wapi",
+        "sw_tz": "Saviku inafanya kazi wapi"
+      },
+      "answer": {
+        "en": "Saviku lists properties in Kenya for now. A place in another country cannot be listed yet."
+      }
+    },
+    {
+      "key": "how_protection_works",
+      "category": "protected_stays",
+      "status": "reviewed",
+      "examples": [
+        "how does saviku protect my money",
+        "is my money safe",
+        "how does escrow work",
+        "what is a protected booking",
+        "pesa zangu ziko salama",
+        "saviku inalindaje pesa yangu",
+        "how does the 48-hour booking protection work"
+      ],
+      "title": {
+        "en": "How does the 48-Hour Booking Protection work?",
+        "sw_ke": "Jinsi Saviku inavyolinda malipo yako",
+        "sw_tz": "Jinsi Saviku inavyolinda malipo yako"
+      },
+      "answer": {
+        "en": "Secure Booking: Your payment is processed through Saviku’s payment provider, allocated to your booking and not paid directly to the host at collection.\n\nProtection Window: You have 48 hours after scheduled check-in to cancel or report a material problem.\n\nHost Payout: If no eligible cancellation or dispute is open, Saviku instructs the provider to pay the verified host after that window, subject to provider availability.\n\nGuest Guarantee: If any critical listing or access issues occur, you are covered under Saviku’s booking protection policy."
+      }
+    },
+    {
+      "key": "protected_stay_what",
+      "category": "protected_stays",
+      "status": "reviewed",
+      "examples": [
+        "what is a protected stay",
+        "is my booking protected",
+        "are Airbnb bookings protected by Saviku"
+      ],
+      "title": {
+        "en": "What is a protected stay?"
+      },
+      "answer": {
+        "en": "A protected stay is a booking made and paid for through a Saviku booking card. Every payment through Saviku is protected. Your payment goes through Saviku's payment provider and is allocated to your booking. It is not paid directly to the host when you book. It stays in a protected hold until the protection window ends, so there is time to report a problem. Bookings made on Airbnb, Booking.com or another platform follow that platform's own rules."
+      }
+    },
+    {
+      "key": "protected_stay_steps",
+      "category": "protected_stays",
+      "status": "reviewed",
+      "examples": [
+        "how does a protected stay work",
+        "what happens after I book",
+        "when is the host paid for a protected stay"
+      ],
+      "title": {
+        "en": "How does a protected stay work?"
+      },
+      "answer": {
+        "en": "First, the guest picks dates on the booking card. Depending on the host's setting, the dates are accepted from the calendar or the host approves the request. Next, the guest pays and the payment stays in a protected hold. The guest then has 48 hours after scheduled check-in to cancel or report a material problem. If no eligible cancellation or dispute is open after that window, Saviku instructs the provider to pay the verified host, minus the disclosed service fee. If a dispute is raised, a Saviku reviewer decides it under the stays terms."
+      }
+    },
+    {
+      "key": "badges_overview",
+      "category": "protected_stays",
+      "status": "reviewed",
+      "examples": [
+        "what do the badges mean",
+        "what does the badge on my card mean",
+        "is a new listing safe to book",
+        "how does a listing get a badge"
+      ],
+      "title": {
+        "en": "What do the badges on a booking card mean?"
+      },
+      "answer": {
+        "en": "Every booking card shows Protected with a lock icon, because every payment through Saviku is protected. Beside it, a card can show one status badge. A listing connected to a platform or TikTok shows a badge such as Airbnb Verified or TikTok Verified until its first guest confirms the stay. It then moves to Saviku Direct, with a shield icon. A listing created from scratch on Saviku can show Listing Verified instead, if the host took an optional photo inside the place. Badges tell you what has been confirmed about a listing. They do not change your protection."
+      }
+    },
+    {
+      "key": "badge_protected",
+      "category": "protected_stays",
+      "status": "reviewed",
+      "examples": [
+        "what does Protected mean",
+        "can I book a listing that only says Protected"
+      ],
+      "title": {
+        "en": "What does Protected mean?"
+      },
+      "answer": {
+        "en": "Every payment through Saviku is protected, so every booking card shows Protected with a lock icon, always. It stays on the card whatever other badge the listing earns. The host has verified their identity."
+      }
+    },
+    {
+      "key": "badge_listing_verified",
+      "category": "protected_stays",
+      "status": "reviewed",
+      "examples": [
+        "what does Listing Verified mean",
+        "how do I get Listing Verified"
+      ],
+      "title": {
+        "en": "What does Listing Verified mean?"
+      },
+      "answer": {
+        "en": "The host chose to take a live photo or clip inside the place with location on, and Saviku matched it to the listing. This is only for listings created from scratch on Saviku, before the first guest books. It is optional, and a host does not need it to take bookings. Listings from a platform or TikTok do not use it. Saviku Direct replaces it after the first guest confirms the stay."
+      }
+    },
+    {
+      "key": "badge_saviku_direct",
+      "category": "protected_stays",
+      "status": "reviewed",
+      "examples": [
+        "what does Saviku Direct mean",
+        "how do I get Saviku Direct",
+        "why was my guest asked to confirm the address"
+      ],
+      "title": {
+        "en": "What does Saviku Direct mean?"
+      },
+      "answer": {
+        "en": "This listing has completed its first stay paid through Saviku. The first stay was confirmed and the payout was released."
+      }
+    },
+    {
+      "key": "badge_platform_verified",
+      "category": "protected_stays",
+      "status": "reviewed",
+      "examples": [
+        "what does Airbnb Verified mean",
+        "what does Booking.com Verified mean"
+      ],
+      "title": {
+        "en": "What does a badge such as Airbnb Verified mean?"
+      },
+      "answer": {
+        "en": "The host connected this listing to Saviku through a secure import from that platform, and its calendar stays in sync. The badge shows the platform's name with a house icon. It does not mean that platform has reviewed the listing for Saviku. It shows until the listing's first guest confirms the stay and the listing moves to Saviku Direct."
+      }
+    },
+    {
+      "key": "badge_tiktok_verified",
+      "category": "protected_stays",
+      "status": "reviewed",
+      "examples": [
+        "what does TikTok Verified mean"
+      ],
+      "title": {
+        "en": "What does TikTok Verified mean?"
+      },
+      "answer": {
+        "en": "The host proved they run the TikTok account this listing comes from, either with a code in their TikTok bio or by signing in with TikTok. It shows until the listing's first guest confirms the stay and the listing moves to Saviku Direct."
+      }
+    }
+  ]
+}

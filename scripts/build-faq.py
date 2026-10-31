@@ -21,6 +21,13 @@ INDEX = ROOT / "index.html"
 LOCK = ROOT / "faq.lock.json"
 START = "<!-- faq:generated -->"
 END = "<!-- /faq:generated -->"
+# Section, anchor, heading. The app reads the same categories to pick who sees an entry.
+SECTIONS = (
+    ("hosts", "faq-hosts", "Hosts"),
+    ("guests", "faq-guests", "Guests"),
+    ("general", "faq-general", "General"),
+    ("protected_stays", "faq-protected-stays", "Protected stays"),
+)
 
 
 def canonical(doc: dict) -> bytes:
@@ -61,17 +68,25 @@ def render_answer(text: str) -> str:
 
 
 def render_faq_html(doc: dict) -> str:
-    details = []
-    for entry in doc["entries"]:
-        title = entry["title"]["en"]
-        body = render_answer(entry["answer"]["en"])
-        details.append(
-            "        <details>\n"
-            f"          <summary>{_esc(title)}</summary>\n"
-            f"          {body}\n"
-            "        </details>"
-        )
-    return START + "\n" + "\n".join(details) + "\n        " + END
+    known = {slug for slug, _, _ in SECTIONS}
+    stray = sorted({str(entry.get("category")) for entry in doc["entries"]} - known)
+    if stray:
+        raise SystemExit(f"data/faq.json has entries outside the sections: {stray}")
+    blocks = []
+    for slug, anchor, heading in SECTIONS:
+        blocks.append(f'        <h3 class="faq-section-title" id="{anchor}">{_esc(heading)}</h3>')
+        for entry in doc["entries"]:
+            if entry["category"] != slug:
+                continue
+            title = entry["title"]["en"]
+            body = render_answer(entry["answer"]["en"])
+            blocks.append(
+                "        <details>\n"
+                f"          <summary>{_esc(title)}</summary>\n"
+                f"          {body}\n"
+                "        </details>"
+            )
+    return START + "\n" + "\n".join(blocks) + "\n        " + END
 
 
 def splice_index(html: str, block: str) -> str:
