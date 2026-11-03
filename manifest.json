@@ -23,7 +23,7 @@
   "platform_faq": {
     "version": "v2",
     "url": "/legal/faq/v2.json",
-    "sha256": "b571f5be248796de3fe30bd172ef2fb2ab7d3649fbf60cc5d494846b36d4595a",
+    "sha256": "1a8df62f4752d6171c2fb4a160cf2e8200309afe102ce5444979a6657806663d",
     "effective_at": "2026-11-01T00:00:00Z",
     "description": "Saviku help and FAQ. The site and the WhatsApp bot both quote this document."
   }

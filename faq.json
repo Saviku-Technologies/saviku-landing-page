@@ -58,14 +58,10 @@
         "does connecting a platform create a new listing"
       ],
       "title": {
-        "en": "Connecting a platform to a place you added from TikTok or a link",
-        "sw_ke": "Kuunganisha platform na mahali ulipoongeza kutoka TikTok au kiungo",
-        "sw_tz": "Kuunganisha platform na mahali ulipoongeza kutoka TikTok au kiungo"
+        "en": "Connecting a platform to a place you added from TikTok or a link"
       },
       "answer": {
-        "en": "Type *connect* and pick your place. Saviku links the platform to your existing unit and does not create a new one. Your booking card, its link and your TikTok posts stay the same, and the place still counts once. Your dates and bookings are kept, and any dates already booked in Saviku close on the new platform. Your platform price and your booking card price stay separate. Your card stays open for bookings while you connect.",
-        "sw_ke": "Andika *connect* kisha chagua mahali pako. Saviku inaunganisha platform na unit yako iliyopo na haiundi unit mpya. Kadi yako ya booking, kiungo chake na machapisho yako ya TikTok yanabaki vile vile, na mahali bado panahesabiwa mara moja. Tarehe na booking zako zinabaki, na tarehe zozote zilizohifadhiwa tayari kwenye Saviku hufungwa kwenye platform mpya. Bei ya platform na bei ya kadi yako ya booking zinabaki tofauti. Kadi yako inabaki wazi kwa booking wakati unaunganisha.",
-        "sw_tz": "Andika *connect* kisha chagua mahali pako. Saviku inaunganisha platform na unit yako iliyopo na haiundi unit mpya. Kadi yako ya uhifadhi, kiungo chake na machapisho yako ya TikTok yanabaki vile vile, na mahali bado panahesabiwa mara moja. Tarehe zako zinabaki na uhifadhi wako unabaki, na tarehe zozote zilizohifadhiwa tayari kwenye Saviku hufungwa kwenye platform mpya. Bei ya platform na bei ya kadi yako ya uhifadhi zinabaki tofauti. Kadi yako inabaki wazi kwa uhifadhi wakati unaunganisha."
+        "en": "Open My property, then My active units, choose your place and tap Connect a platform. You can also type *connect* and pick your place. Saviku links the platform to your existing unit and does not create a new one. Your booking card, its link and your TikTok posts stay the same, and the place still counts once. Your dates and bookings are kept, and any dates already booked in Saviku close on the new platform. Your platform price and your booking card price stay separate. Your card stays open for bookings while you connect."
       }
     },
     {
@@ -121,14 +117,27 @@
         "how does my listing get verified"
       ],
       "title": {
-        "en": "Activating your unit",
-        "sw_ke": "Kuamsha unit yako",
-        "sw_tz": "Kuamsha unit yako"
+        "en": "Activating your unit"
       },
       "answer": {
-        "en": "You do not need a photo to start taking bookings. Your booking card goes live once your listing is saved, your ID is verified and your booking terms are set. A listing on a connected platform also needs that connection to finish. Every booking card shows Protected, because every payment through Saviku is protected. If you created your listing from scratch on Saviku, you can choose to take a photo inside the place with location on before your first guest books, which earns Listing Verified. Your listing earns Saviku Direct after its first stay paid through Saviku.",
-        "sw_ke": "Huna haja ya picha ili kuanza kupokea booking. Kadi yako ya booking inawekwa hai pindi listing yako inapohifadhiwa, kitambulisho chako kinapothibitishwa, na masharti yako ya booking yanapowekwa. Listing iliyo kwenye platform iliyounganishwa inahitaji pia muunganisho huo ukamilike. Kila kadi ya booking inaonyesha Protected, kwa sababu kila malipo kupitia Saviku yanalindwa. Kama uliunda listing yako kuanzia mwanzo kwenye Saviku, unaweza kuchagua kupiga picha ndani ya mahali, location ikiwa imewashwa, kabla ya mgeni wa kwanza kuhifadhi, na hilo huleta Listing Verified. Listing yako hupata Saviku Direct baada ya kukaa kwake kwa mara ya kwanza kulipwa kupitia Saviku.",
-        "sw_tz": "Huna haja ya picha ili kuanza kupokea uhifadhi. Kadi yako ya uhifadhi inawekwa hai pindi listing yako inapohifadhiwa, kitambulisho chako kinapothibitishwa, na masharti yako ya uhifadhi yanapowekwa. Listing iliyo kwenye platform iliyounganishwa inahitaji pia muunganisho huo ukamilike. Kila kadi ya uhifadhi inaonyesha Protected, kwa sababu kila malipo kupitia Saviku yanalindwa. Kama uliunda listing yako kuanzia mwanzo kwenye Saviku, unaweza kuchagua kupiga picha ndani ya mahali, location ikiwa imewashwa, kabla ya mgeni wa kwanza kuhifadhi, na hilo huleta Listing Verified. Listing yako hupata Saviku Direct baada ya kukaa kwake kwa mara ya kwanza kulipwa kupitia Saviku."
+        "en": "You do not need a photo to start taking bookings. Your booking card goes live once your listing is saved, your ID is verified and your booking terms are set. A listing on a connected platform also needs that connection to finish, and its card shows that platform's badge, such as Airbnb Verified. A listing from TikTok, or one added through WhatsApp with no link, goes live as Unverified, and guests can book it straight away. To verify it, open My property, then My active units, choose your place and tap Verify my place. Every booking card shows Protected. Your listing earns Saviku Direct after its first stay paid through Saviku."
+      }
+    },
+    {
+      "key": "verify_my_place",
+      "category": "hosts",
+      "status": "reviewed",
+      "examples": [
+        "how do I verify my place",
+        "how do I get TikTok Verified",
+        "how do I remove the Unverified badge",
+        "my card says Unverified what do I do"
+      ],
+      "title": {
+        "en": "Verifying your place"
+      },
+      "answer": {
+        "en": "Open My property, then My active units, choose your place and tap Verify my place. You can also type *verify my place*. Saviku picks the check from where your listing came from. Your card stays live and bookable while you verify.\n\nTikTok: Add your Saviku code to the bio of the account that posted the listing, then tap I've added it. Saviku checks the bio for 15 minutes and messages you the result. Your card then shows TikTok Verified, and you can remove the code.\n\nWhatsApp: For a place you added with no link, take a live photo at the place with location on. Your card then shows Listing Verified.\n\nPlatforms: For a place on Airbnb, Booking.com or another platform, connect that platform to the same place. Your card then shows its badge, such as Airbnb Verified."
       }
     },
     {
@@ -577,14 +586,10 @@
         "how does a listing get a badge"
       ],
       "title": {
-        "en": "What do the badges on a booking card mean?",
-        "sw_ke": "Beji kwenye kadi ya booking zinamaanisha nini?",
-        "sw_tz": "Beji kwenye kadi ya uhifadhi zinamaanisha nini?"
+        "en": "What do the badges on a booking card mean?"
       },
       "answer": {
-        "en": "Every booking card shows Protected with a lock icon, because every payment through Saviku is protected. Beside it, a card can show one status badge. A listing connected to a platform or TikTok shows a badge such as Airbnb Verified or TikTok Verified until its first guest confirms the stay. It then moves to Saviku Direct, with a shield icon. A listing created from scratch on Saviku can show Listing Verified instead, if the host took an optional photo inside the place. Badges tell you what has been confirmed about a listing. They do not change your protection.",
-        "sw_ke": "Kila kadi ya booking inaonyesha Protected pamoja na aikoni ya kufuli, kwa sababu kila malipo kupitia Saviku yanalindwa. Kando yake, kadi inaweza kuonyesha beji moja ya hali. Listing iliyounganishwa na platform au TikTok inaonyesha beji kama Airbnb Verified au TikTok Verified hadi mgeni wake wa kwanza athibitishe kukaa. Kisha inahamia Saviku Direct, na aikoni ya ngao. Listing iliyoundwa kuanzia mwanzo kwenye Saviku inaweza kuonyesha Listing Verified badala yake, kama mwenyeji alipiga picha ya hiari ndani ya mahali. Beji zinakuambia kilichothibitishwa kuhusu listing. Hazibadilishi ulinzi wako.",
-        "sw_tz": "Kila kadi ya uhifadhi inaonyesha Protected pamoja na aikoni ya kufuli, kwa sababu kila malipo kupitia Saviku yanalindwa. Kando yake, kadi inaweza kuonyesha beji moja ya hali. Listing iliyounganishwa na platform au TikTok inaonyesha beji kama Airbnb Verified au TikTok Verified hadi mgeni wake wa kwanza athibitishe kukaa. Kisha inahamia Saviku Direct, na aikoni ya ngao. Listing iliyoundwa kuanzia mwanzo kwenye Saviku inaweza kuonyesha Listing Verified badala yake, kama mwenyeji alipiga picha ya hiari ndani ya mahali. Beji zinakuambia kilichothibitishwa kuhusu listing. Hazibadilishi ulinzi wako."
+        "en": "Every booking card shows Protected with a lock icon, because every payment through Saviku is protected. Beside it, a card shows one status badge. A listing connected to a platform shows that platform's badge, such as Airbnb Verified. A listing from TikTok, or one added through WhatsApp with no link, starts as Unverified. It moves to TikTok Verified or Listing Verified when the host verifies it. An Unverified listing is live and can be booked. After a listing's first guest confirms a stay paid through Saviku, it moves to Saviku Direct, with a shield icon. Badges tell you what has been confirmed about a listing. They do not change your protection."
       }
     },
     {
@@ -607,6 +612,22 @@
       }
     },
     {
+      "key": "badge_unverified",
+      "category": "protected_stays",
+      "status": "reviewed",
+      "examples": [
+        "what does Unverified mean",
+        "is an Unverified listing safe to book",
+        "why does this card say Unverified"
+      ],
+      "title": {
+        "en": "What does Unverified mean?"
+      },
+      "answer": {
+        "en": "This listing is live and can be booked, and its host has verified their identity. The host hasn't yet proved the listing itself, through their TikTok account, a live photo at the place, or a connected platform. Your payment is protected the same way as on any other listing."
+      }
+    },
+    {
       "key": "badge_listing_verified",
       "category": "protected_stays",
       "status": "reviewed",
@@ -615,14 +636,10 @@
         "how do I get Listing Verified"
       ],
       "title": {
-        "en": "What does Listing Verified mean?",
-        "sw_ke": "Listing Verified inamaanisha nini?",
-        "sw_tz": "Listing Verified inamaanisha nini?"
+        "en": "What does Listing Verified mean?"
       },
       "answer": {
-        "en": "The host chose to take a live photo or clip inside the place with location on, and Saviku matched it to the listing. This is only for listings created from scratch on Saviku, before the first guest books. It is optional, and a host does not need it to take bookings. Listings from a platform or TikTok do not use it. Saviku Direct replaces it after the first guest confirms the stay.",
-        "sw_ke": "Mwenyeji alichagua kupiga picha ya moja kwa moja au klipu ndani ya mahali, location ikiwa imewashwa, na Saviku ikalinganisha na listing. Hii ni kwa listing zilizoundwa kuanzia mwanzo kwenye Saviku tu, kabla ya mgeni wa kwanza kuhifadhi. Ni hiari, na mwenyeji haihitaji ili kupokea booking. Listing kutoka kwa platform au TikTok hazitumii. Saviku Direct inaichukua nafasi baada ya mgeni wa kwanza kuthibitisha kukaa.",
-        "sw_tz": "Mwenyeji alichagua kupiga picha ya moja kwa moja au klipu ndani ya mahali, location ikiwa imewashwa, na Saviku ikalinganisha na listing. Hii ni kwa listing zilizoundwa kuanzia mwanzo kwenye Saviku tu, kabla ya mgeni wa kwanza kuhifadhi. Ni hiari, na mwenyeji haihitaji ili kupokea uhifadhi. Listing kutoka kwenye platform au TikTok hazitumii. Saviku Direct inaichukua nafasi baada ya mgeni wa kwanza kuthibitisha kukaa."
+        "en": "The host took a live photo or clip at the place with location on, and Saviku matched it to the listing's address. It is for listings added through WhatsApp with no platform or TikTok link. The host can do it while listing, or any time later with Verify my place. A connected platform's badge replaces it, and so does Saviku Direct after the first guest confirms the stay."
       }
     },
     {
@@ -672,14 +689,10 @@
         "what does TikTok Verified mean"
       ],
       "title": {
-        "en": "What does TikTok Verified mean?",
-        "sw_ke": "TikTok Verified inamaanisha nini?",
-        "sw_tz": "TikTok Verified inamaanisha nini?"
+        "en": "What does TikTok Verified mean?"
       },
       "answer": {
-        "en": "The host proved they run the TikTok account this listing comes from, either with a code in their TikTok bio or by signing in with TikTok. It shows until the listing's first guest confirms the stay and the listing moves to Saviku Direct.",
-        "sw_ke": "Mwenyeji alithibitisha kuwa ndiye anaendesha akaunti ya TikTok ambayo listing hii inatoka, ama kwa msimbo kwenye bio ya TikTok ama kwa kuingia kwa kutumia TikTok. Inaonyeshwa hadi mgeni wa kwanza wa listing athibitishe kukaa, na listing ihame Saviku Direct.",
-        "sw_tz": "Mwenyeji alithibitisha kuwa ndiye anaendesha akaunti ya TikTok ambayo listing hii inatoka, ama kwa msimbo kwenye bio ya TikTok ama kwa kuingia kwa kutumia TikTok. Inaonyeshwa hadi mgeni wa kwanza wa listing athibitishe kukaa, na listing ihame Saviku Direct."
+        "en": "The host proved they run the TikTok account that posted this listing, by adding a one-time Saviku code to that account's bio. It shows until a connected platform's badge replaces it, or until the listing's first guest confirms the stay and the listing moves to Saviku Direct."
       }
     }
   ]
