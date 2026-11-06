@@ -1323,6 +1323,7 @@ body.is-locked { overflow: hidden; }
 
 /* ---------- FAQ (native details — zero JS) -------------------------------- */
 .faq { border-top: 1px solid var(--saviku-gray); }
+.faq-section-title { margin: 28px 0 8px; scroll-margin-top: 96px; }
 .faq details { border-bottom: 1px solid var(--saviku-gray); }
 .faq summary {
   display: flex;

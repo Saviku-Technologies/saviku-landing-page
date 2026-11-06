@@ -21,10 +21,10 @@
     "description": "Saviku platform terms and conditions"
   },
   "platform_faq": {
-    "version": "v1",
-    "url": "/legal/faq/v1.json",
-    "sha256": "f0576b9c01927498f2d54832c9bf16463fca7e74149d72eecabfaf47fcd0091f",
-    "effective_at": "2026-10-12T00:00:00Z",
+    "version": "v2",
+    "url": "/legal/faq/v2.json",
+    "sha256": "1a8df62f4752d6171c2fb4a160cf2e8200309afe102ce5444979a6657806663d",
+    "effective_at": "2026-11-01T00:00:00Z",
     "description": "Saviku help and FAQ. The site and the WhatsApp bot both quote this document."
   }
 }
